@@ -13,7 +13,8 @@ body {
   display: none;
 }
 
-.index-container {
+.index-container,
+.search-container {
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -23,6 +24,123 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
+}
+
+.search-container {
+  background: url(../img/full-background.png);
+}
+
+.nav-container {
+  display: flex;
+  width: 100%;
+  height: 15%;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-container-mobile {
+  display: none;
+}
+
+.nav-icons {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.lens.active {
+  opacity: 0.5;
+}
+
+.profile {
+  margin: 0 10%;
+}
+
+.lens,
+.profile,
+.chat {
+  cursor: pointer;
+  height: 4.5rem;
+}
+
+.lens:hover,
+.profile:hover,
+.chat:hover {
+  opacity: 0.5;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 85%;
+  align-items: center;
+  justify-content: center;
+}
+
+.like,
+.dislike {
+  width: 10%;
+  height: 10%;
+  cursor: pointer;
+}
+
+.dislike-mobile,
+.like-mobile {
+  display: none;
+}
+
+.card {
+  width: 25rem;
+  height: 40rem;
+  margin: 0 1% 5% 1%;
+  background: #215254;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.photos {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.person {
+  height: 50%;
+  width: 100%;
+}
+
+.animal {
+  height: 50%;
+  width: 100%;
+}
+
+.description {
+  height: 20%;
+  width: 100%;
+  color: white;
+  line-height: 2rem;
+  padding: 4% 0 0 3%;
+}
+
+.person-info,
+.animal-info {
+  font-size: 1.5rem;
+}
+
+.person-age,
+.animal-age {
+  opacity: 0.6;
+}
+
+.city-info {
+  opacity: 0.6;
 }
 
 .index-logo-container {
@@ -259,14 +377,34 @@ input,
   cursor: pointer;
 }
 
-@media only screen and (max-width: 900px) and (min-width: 431px) {
+@media only screen and (max-width: 720px) and (min-width: 431px) {
   .less-width-text {
     display: none;
   }
 
   .social-logos {
     flex-direction: column;
-    /* padding: 0 30% 10% 0; */
+    padding: 0 0% 15% 0;
+    /* height: 10%; */
+  }
+
+  .img-anchor {
+    width: 50%;
+  }
+
+  .insta-logo-index,
+  .twitter-logo-index,
+  .fb-logo-index {
+    height: 80%;
+  }
+
+  .card {
+    width: 18rem;
+    height: 30rem;
+  }
+
+  .description {
+    padding: 0.5% 0 0 3%;
   }
 }
 
@@ -275,6 +413,72 @@ input,
 @media only screen and (max-device-width: 430px) {
   .index-container {
     background-image: url(../img/background-mobile.png);
+  }
+
+  .search-container {
+    background: url(../img/full-background-mobile.png);
+  }
+
+  .nav-container {
+    display: none;
+  }
+
+  .nav-container-mobile {
+    display: flex;
+    height: 7%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav-icons {
+    width: 50%;
+    height: 100%;
+  }
+
+  .lens,
+  .profile,
+  .chat {
+    height: 2.5rem;
+  }
+
+  .profile {
+    margin: 0 25%;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 93%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .likes-mobile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .dislike,
+  .like {
+    display: none;
+  }
+
+  .dislike-mobile,
+  .like-mobile {
+    display: flex;
+    height: 80%;
+    width: auto;
+    margin: 0 5%;
+  }
+
+  .card {
+    width: 20rem;
+    height: 35rem;
+    margin: 10% 1% 5% 1%;
   }
 
   .index-main-container,
