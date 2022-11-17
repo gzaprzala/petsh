@@ -14,19 +14,19 @@
           class="lens active"
           src="public/img/lens.svg"
           alt="lens"
-          onclick="location.href='search'"
+          onclick="location.assign('search')"
         />
         <img
           class="profile"
           src="public/img/profile.svg"
           alt="profile"
-          onclick="location.href='search'"
+          onclick="location.assign('search')"
         />
         <img
           class="chat"
           src="public/img/chat.svg"
           alt="chat"
-          onclick="location.href='search'"
+          onclick="location.assign('search')"
         />
       </div>
     </div>
@@ -77,19 +77,19 @@
           class="lens active"
           src="public/img/lens-mobile.svg"
           alt="lens"
-          onclick="location.href='search'"
+          onclick="location.assign('search')"
         />
         <img
           class="profile"
           src="public/img/profile-mobile.svg"
           alt="profile"
-          onclick="location.href='search'"
+          onclick="location.assign('search')"
         />
         <img
           class="chat"
           src="public/img/chat-mobile.svg"
           alt="chat"
-          onclick="location.href='search'"
+          onclick="location.assign('search')"
         />
       </div>
     </div>

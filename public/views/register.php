@@ -3,30 +3,32 @@
   <link rel="stylesheet" type="text/css" href="public/css/style.css" />
   <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet" />
   <link href="https://fonts.cdnfonts.com/css/bluetea" rel="stylesheet" />
-  <link
-    href="https://www.dafontfree.net/embed/Y2Fpcm8tbGlnaHQmZGF0YS84MjkvYy8xODE4MjIvQ2Fpcm8tTGlnaHQudHRm"
-    rel="stylesheet"
-    type="text/css"
-  />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Register / Petsh</title>
 </head>
 <body>
   <div class="index-container">
     <div class="index-logo-container">
-      <a href="index"
-        ><img class="index-logo" src="public/img/logo.png" alt="logo"
-      /></a>
+      <img
+        class="index-logo"
+        src="public/img/logo.png"
+        alt="logo"
+        onclick="location.assign('/')"
+      />
     </div>
 
     <div class="index-main-container-si-su">
       <div class="login-container">
         <div class="si-su">
-          <a href="login"><button class="sign-in">Sign In</button></a>
-          <a href="register"><button class="sign-up active">Sign Up</button></a>
+          <button class="sign-in" onclick="location.assign('login')">
+            Sign In
+          </button>
+          <button class="sign-up active" onclick="location.assign('register')">
+            Sign Up
+          </button>
         </div>
-        <div class="log-pas-conf">
-          <input class="login" type="text" placeholder="login" />
+        <form class="login">
+          <input class="username" type="text" placeholder="login" />
           <input class="email" type="text" placeholder="email" />
           <input class="password" type="password" placeholder="password" />
           <input
@@ -34,32 +36,32 @@
             type="password"
             placeholder="repeat password"
           />
-          <button class="confirm">CONFIRM</button>
-        </div>
+          <button class="submit">CONFIRM</button>
+        </form>
       </div>
     </div>
     <div class="index-buttons-container-si-su"></div>
     <div class="index-bottom-container">
       <div class="index-socials">
         <div class="social-logos">
-          <a href="https://www.instagram.com" class="img-anchor"
-            ><img
-              class="insta-logo-index"
-              src="public/img/logo-insta.svg"
-              alt="logo-insta"
-          /></a>
-          <a href="https://www.twitter.com" class="img-anchor"
-            ><img
-              class="twitter-logo-index"
-              src="public/img/logo-twitter.svg"
-              alt="logo-twitter"
-          /></a>
-          <a href="https://www.facebook.com" class="img-anchor"
-            ><img
-              class="fb-logo-index"
-              src="public/img/logo-fb.svg"
-              alt="logo-fb"
-          /></a>
+          <img
+            class="insta-logo-index"
+            src="public/img/logo-insta.svg"
+            alt="logo-insta"
+            onclick="location.assign('https://www.instagram.com')"
+          />
+          <img
+            class="twitter-logo-index"
+            src="public/img/logo-twitter.svg"
+            alt="logo-twitter"
+            onclick="location.assign('https://www.twitter.com')"
+          />
+          <img
+            class="fb-logo-index"
+            src="public/img/logo-fb.svg"
+            alt="logo-fb"
+            onclick="location.assign('https://www.facebook.com')"
+          />
         </div>
       </div>
       <div class="animals-container">
