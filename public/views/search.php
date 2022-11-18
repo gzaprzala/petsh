@@ -26,7 +26,7 @@
           class="chat"
           src="public/img/chat.svg"
           alt="chat"
-          onclick="location.assign('search')"
+          onclick="location.assign('chat')"
         />
       </div>
     </div>

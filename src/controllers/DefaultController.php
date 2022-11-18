@@ -18,4 +18,8 @@ class DefaultController extends AppController {
   public function search() {
     $this->render('search');
   }
+
+  public function chat() {
+    $this->render('chat');
+  }
 }
