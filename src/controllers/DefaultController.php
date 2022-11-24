@@ -22,4 +22,8 @@ class DefaultController extends AppController {
   public function chat() {
     $this->render('chat');
   }
+
+  public function profile() {
+    $this->render('profile');
+  }
 }

@@ -18,7 +18,8 @@ a:visited {
 
 .container,
 .search-container,
-.chat-container {
+.chat-container,
+.profile-container {
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -280,7 +281,8 @@ a:visited {
 }
 
 .search-container,
-.chat-container {
+.chat-container,
+.profile-container {
   background: url(../img/full-background.png);
 }
 

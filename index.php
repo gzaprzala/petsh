@@ -10,6 +10,7 @@ Routing::get('login', 'DefaultController');
 Routing::get('register', 'DefaultController');
 Routing::get('search', 'DefaultController');
 Routing::get('chat', 'DefaultController');
+Routing::get('profile', 'DefaultController');
 Routing::post('login', 'SecurityController');
 
 Routing::run($path);
