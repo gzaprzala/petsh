@@ -8,4 +8,5 @@
   <a href="chat">
     <img src="public/img/chat-mobile.svg" alt="chat" class="container-navigation-chat">
   </a>
+  <img src="public/img/dark-mode.svg" alt="logo" class="container-navigation-darkmode">
 </div>

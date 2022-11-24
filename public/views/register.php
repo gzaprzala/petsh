@@ -29,6 +29,7 @@
     </div>
     <?php include "public/views/components/footer.php" ?>
   </div>
+  <script src="public/js/darkMode.js"></script>
 </body>
 
 </html>

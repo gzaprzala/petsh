@@ -15,6 +15,7 @@
   <div class="profile-container">
     <?php include "public/views/components/navigation.php" ?>
   </div>
+  <script src="public/js/darkMode.js"></script>
 </body>
 
 </html>

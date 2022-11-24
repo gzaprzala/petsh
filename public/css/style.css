@@ -9,6 +9,22 @@ body {
   font-family: 'Cairo';
 }
 
+:root {
+  --first-color: #275858;
+  --second-color: #1e4444;
+  --desktop-background: url(../img/background.png);
+  --desktop-background-full: url(../img/full-background.png);
+  --mobile-background-full: url(../img/full-background-mobile.png);
+}
+
+.dark-mode {
+  --first-color: #1a3b3b;
+  --second-color: #1e4444;
+  --desktop-background: url(../img/background-darkmode.png);
+  --desktop-background-full: url(../img/full-background-dark.png);
+  --mobile-background-full: url(../img/full-background-mobile-dark.png);
+}
+
 /* desktop version */
 
 a:link,
@@ -24,7 +40,7 @@ a:visited {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  background: url(../img/background.png);
+  background: var(--desktop-background);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -32,9 +48,9 @@ a:visited {
 
 .container-header {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
-  padding: 4% 0 0 4%;
+  padding: 4% 4% 0 4%;
   width: 100%;
   height: 20%;
 }
@@ -42,8 +58,25 @@ a:visited {
 .container-header-logo {
   height: 10rem;
   width: auto;
-  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
   cursor: pointer;
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+}
+
+.container-header-darkmode {
+  height: 3rem;
+  width: auto;
+  cursor: pointer;
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+}
+
+.container-navigation-darkmode {
+  position: fixed;
+  height: 3rem;
+  width: auto;
+  cursor: pointer;
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+  right: 2%;
+  top: 5%;
 }
 
 .container-main,
@@ -79,7 +112,7 @@ a:visited {
   background: white;
   border: none;
   outline: none;
-  color: #2e6969;
+  color: var(--first-color);
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
   display: flex;
@@ -142,7 +175,7 @@ a:visited {
   border: none;
   border-radius: 1rem;
   outline: none;
-  color: #2e6969;
+  color: var(--first-color);
   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
   padding-left: 1rem;
 }
@@ -153,7 +186,7 @@ a:visited {
 .container-main-register-form-email::placeholder,
 .container-main-register-form-password::placeholder,
 .container-main-register-form-repeat-password::placeholder {
-  color: #2e696980;
+  color: var(--first-color);
 }
 
 .container-main-login-form-submit,
@@ -165,7 +198,7 @@ a:visited {
   border: none;
   outline: none;
   color: white;
-  background: #275858;
+  background: var(--first-color);
   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
 }
 
@@ -223,7 +256,7 @@ a:visited {
   border-radius: 1rem;
   border: none;
   outline: none;
-  color: #2e6969;
+  color: var(--first-color);
   text-align: center;
   cursor: pointer;
   font-size: 1.3rem;
@@ -283,7 +316,7 @@ a:visited {
 .search-container,
 .chat-container,
 .profile-container {
-  background: url(../img/full-background.png);
+  background: var(--desktop-background-full);
 }
 
 .container-navigation {
@@ -332,7 +365,7 @@ a:visited {
   min-width: 25rem;
   min-height: 35rem;
   border-radius: 1rem;
-  background: #215254;
+  background: var(--second-color);
   margin: 0 2% 0 2%;
   box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
 }
@@ -417,7 +450,7 @@ a:visited {
   align-items: center;
   width: 100%;
   height: 5rem;
-  background: #2e6969;
+  background: var(--first-color);
 }
 
 .chat-container-main-left-user1-photo {
@@ -500,7 +533,7 @@ a:visited {
   }
 
   .search-container {
-    background: url(../img/full-background-mobile.png);
+    background: var(--mobile-background-full);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100% 100%;
@@ -515,7 +548,7 @@ a:visited {
 
 @media only screen and (max-device-width: 430px) {
   .container {
-    background: url(../img/full-background-mobile.png);
+    background: var(--mobile-background-full);
   }
 
   .container-header {
@@ -527,6 +560,16 @@ a:visited {
   .container-header-logo {
     height: 6rem;
     width: auto;
+  }
+
+  .container-navigation-darkmode {
+    height: 2.5rem;
+    left: 3%;
+    top: 1.5%;
+  }
+
+  .container-header-darkmode {
+    display: none;
   }
 
   .container-main {
@@ -597,7 +640,7 @@ a:visited {
 
   .search-container,
   .chat-container {
-    background: url(../img/full-background-mobile.png);
+    background: var(--mobile-background-full);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -657,7 +700,7 @@ a:visited {
   }
 
   .chat-container-main-left-user1 {
-    background: #265757;
+    background: var(--first-color);
     height: 6%;
   }
 
