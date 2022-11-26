@@ -511,6 +511,85 @@ a:visited {
   width: auto;
 }
 
+.profile-container-main {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  color: white;
+  height: 50rem;
+  width: 30rem;
+  background: var(--second-color);
+  border-radius: 1rem;
+}
+
+.profile-container-main-apply {
+  width: 6rem;
+  height: 2rem;
+  color: var(--second-color);
+  border-radius: 0.5rem;
+  border: none;
+  outline: none;
+}
+
+.profile-container-main-photo,
+.profile-container-main-name,
+.profile-container-main-age,
+.profile-container-main-city {
+  font-size: 1.5rem;
+  height: 7rem;
+  width: 17rem;
+  background: var(--second-color);
+  background: #ffffff50;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.profile-container-main-photo-form-update,
+.profile-container-main-name-form-update,
+.profile-container-main-age-form-update,
+.profile-container-main-city-form-update {
+  border-radius: 0.5rem;
+  height: 2rem;
+  padding-left: 1%;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+
+.profile-container-main-photo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.profile-container-main-photo-update {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  width: 50%;
+  font-size: 1.5rem;
+}
+
+.profile-container-main-photo-update-upload {
+  border-radius: 0.3rem;
+  border: none;
+  outline: none;
+  height: 1.5rem;
+  width: 5rem;
+  background: white;
+  color: var(--second-color);
+}
+
+.profile-container-main-photo-photo {
+  height: 3rem;
+  width: 3rem;
+}
+
 @media only screen and (max-width: 900px) and (min-width: 431px) {
   .container-main-text-lower {
     display: none;

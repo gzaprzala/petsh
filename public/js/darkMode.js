@@ -1,16 +1,19 @@
 window.onload = () => {
-  console.log(localStorage.getItem('mode'));
   const button = document.querySelector('.container-header-darkmode');
   const buttonSI = document.querySelector('.container-navigation-darkmode');
+
   const instagramLogo = document.querySelector(
     '.container-footer-socials-instagram'
   );
+
   const twitterLogo = document.querySelector(
     '.container-footer-socials-twitter'
   );
+
   const facebookLogo = document.querySelector(
     '.container-footer-socials-facebook'
   );
+  
   const body = document.querySelector('body');
 
   if (button) {

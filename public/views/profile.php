@@ -14,6 +14,30 @@
 <body>
   <div class="profile-container">
     <?php include "public/views/components/navigation.php" ?>
+    <div class="profile-container-main">
+      <div class="profile-container-main-photo">
+        <form class="profile-container-main-photo-update" method="POST">Photo
+          <button class="profile-container-main-photo-update-upload">Upload</button>
+        </form>
+        <img class="profile-container-main-photo-photo" src="public/img/light-mode.svg" alt="photo">
+      </div>
+      <div class="profile-container-main-name">Name
+        <form class="profile-container-main-name-form" method="POST">
+          <input type="text" class="profile-container-main-name-form-update" placeholder="Enter new name...">
+        </form>
+      </div>
+      <div class="profile-container-main-age">Age
+        <form class="profile-container-main-age-form" method="POST">
+          <input type="text" class="profile-container-main-age-form-update" placeholder="Enter new age...">
+        </form>
+      </div>
+      <div class="profile-container-main-city">City
+        <form class="profile-container-main-city-form" method="POST">
+          <input type="text" class="profile-container-main-city-form-update" placeholder="Enter new city...">
+        </form>
+      </div>
+      <button class="profile-container-main-apply">Apply</button>
+    </div>
   </div>
   <script src="public/js/darkMode.js"></script>
 </body>
