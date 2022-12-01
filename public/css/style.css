@@ -465,7 +465,7 @@ a:visited {
   flex-direction: column;
   height: 100%;
   width: 95%;
-  background: white;
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .chat-container-main-right-messages {
@@ -833,5 +833,15 @@ a:visited {
 
   .chat-container-main-right-tools-enter-send-icon {
     width: 2rem;
+  }
+
+  .profile-container-main {
+    height: 94%;
+  }
+
+  .a-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
