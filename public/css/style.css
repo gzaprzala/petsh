@@ -543,7 +543,8 @@ a:visited {
 .profile-container-main-photo,
 .profile-container-main-name,
 .profile-container-main-age,
-.profile-container-main-city {
+.profile-container-main-city,
+.profile-container-main-password {
   font-size: 1.5rem;
   height: 7rem;
   width: 17rem;
@@ -554,7 +555,8 @@ a:visited {
 .profile-container-main-photo-form-update,
 .profile-container-main-name-form-update,
 .profile-container-main-age-form-update,
-.profile-container-main-city-form-update {
+.profile-container-main-city-form-update,
+.profile-container-main-password-form-update {
   /* border-radius: 0.5rem; */
   height: 2rem;
   padding-left: 1%;
@@ -563,11 +565,15 @@ a:visited {
   background-color: transparent;
   outline: none;
   text-align: center;
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+  text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.25);
+  color: white;
 }
 
 .profile-container-main-name-form-update::placeholder,
 .profile-container-main-age-form-update::placeholder,
-.profile-container-main-city-form-update::placeholder {
+.profile-container-main-city-form-update::placeholder,
+.profile-container-main-password-form-update::placeholder {
   color: white;
   opacity: 0.5;
 }
@@ -608,6 +614,10 @@ a:visited {
 .profile-container-main-photo-photo {
   height: 3rem;
   width: 3rem;
+}
+
+.no-valid {
+  background: #fc2929;
 }
 
 @media only screen and (max-width: 900px) and (min-width: 431px) {

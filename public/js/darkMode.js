@@ -13,7 +13,7 @@ window.onload = () => {
   const facebookLogo = document.querySelector(
     '.container-footer-socials-facebook'
   );
-  
+
   const body = document.querySelector('body');
 
   if (button) {

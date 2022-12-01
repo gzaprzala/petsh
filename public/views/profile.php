@@ -36,6 +36,11 @@
           <input type="text" class="profile-container-main-city-form-update" placeholder="Enter new city...">
         </form>
       </div>
+      <div class="profile-container-main-password">New password
+        <form class="profile-container-main-password-form" method="POST">
+          <input type="password" class="profile-container-main-password-form-update" placeholder="Enter new password...">
+        </form>
+      </div>
       <button class="profile-container-main-apply">Apply</button>
     </div>
   </div>
