@@ -31,7 +31,7 @@
         </div>
         <input name="username" type="text" placeholder="login" class="container-main-login-form-username">
         <input name="password" type="password" placeholder="password" class="container-main-login-form-password">
-        <button class="container-main-login-form-submit">CONFIRM</button>
+        <button type="submit" class="container-main-login-form-submit">CONFIRM</button>
       </form>
     </div>
     <?php include "public/views/components/footer.php" ?>
