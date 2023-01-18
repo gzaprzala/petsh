@@ -1,3 +1,6 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="public/css/footer.css" />
+</head>
 <div class="container-footer">
   <div class="container-footer-socials">
     <a href="https://www.instagram.com">
