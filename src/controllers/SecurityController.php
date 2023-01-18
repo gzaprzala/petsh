@@ -1,8 +1,8 @@
 <?php
 
 require_once 'AppController.php';
-require_once __DIR__.'/../models/User.php';
-require_once __DIR__.'/../repository/UserRepository.php';
+require_once __DIR__ . '/../models/User.php';
+require_once __DIR__ . '/../repository/UserRepository.php';
 
 class SecurityController extends AppController {
   private $userRepository;
@@ -55,6 +55,6 @@ class SecurityController extends AppController {
 
     $this->userRepository->addUser($user);
 
-    return $this->render('login', ['messages' => ['You\'ve been succesfully registrated!']]);
+    return $this->render('login', ['messages' => ['You\'ve been succesfully registered!']]);
   }
 }
