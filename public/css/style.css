@@ -636,26 +636,11 @@ a:visited {
   .container {
     background: var(--mobile-background-full);
   }
-
-  .container-header {
-    justify-content: center;
-    width: 100%;
-    height: 20%;
-  }
-
-  .container-header-logo {
-    height: 6rem;
-    width: auto;
-  }
-
+  
   .container-navigation-darkmode {
     height: 2.5rem;
     left: 3%;
     top: 1.5%;
-  }
-
-  .container-header-darkmode {
-    display: none;
   }
 
   .container-main {
