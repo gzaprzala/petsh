@@ -1,0 +1,32 @@
+.container-navigation-darkmode {
+  position: fixed;
+  height: 3rem;
+  width: auto;
+  cursor: pointer;
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+  right: 2%;
+  top: 5%;
+}
+
+.container-navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0 20% 0 20%;
+  width: 100%;
+  height: 15%;
+}
+
+@media only screen and (max-device-width: 430px) {
+  .container-navigation-darkmode {
+    height: 2.5rem;
+    left: 3%;
+    top: 1.5%;
+  }
+
+  .container-navigation {
+    height: 6%;
+    order: 1;
+  }
+}

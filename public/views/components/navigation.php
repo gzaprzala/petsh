@@ -1,3 +1,6 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="public/css/navigation.css" />
+</head>
 <div class="container-navigation">
   <a href="search" class="a-centered">
     <img src="public/img/lens-mobile.svg" alt="lens" class="container-navigation-lens">
