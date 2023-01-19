@@ -14,5 +14,6 @@ Routing::get('profile', 'DefaultController');
 Routing::post('login', 'SecurityController');
 Routing::post('register', 'SecurityController');
 Routing::post('photoUpload', 'ProfileController');
+Routing::post('userInfoUpload', 'ProfileController');
 
 Routing::run($path);

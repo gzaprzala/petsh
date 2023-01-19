@@ -2,6 +2,8 @@
 
 require_once 'AppController.php';
 require_once __DIR__ . '/../models/UserPhoto.php';
+require_once __DIR__ . '/../repository/UserPhotoRepository.php';
+require_once __DIR__ . '/../models/UserInfo.php';
 
 class ProfileController extends AppController {
   const MAX_FILE_SIZE = 1024 * 1024;
@@ -9,6 +11,13 @@ class ProfileController extends AppController {
   const UPLOAD_DIRECTORY = '/../public/uploads/';
 
   private $messages = [];
+  private $userPhotoRepository;
+
+  public function __construct() {
+    parent::__construct();
+    $this->userPhotoRepository = new UserPhotoRepository();
+  }
+
   public function photoUpload() {
     if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
       move_uploaded_file(
@@ -17,6 +26,7 @@ class ProfileController extends AppController {
       );
 
       $photo = new UserPhoto($_FILES['file']['name']);
+      $this->userPhotoRepository->addPhoto($photo);
 
       return $this->render('profile', ['messages' => $this->messages, 'photo' => $photo]);
     }
