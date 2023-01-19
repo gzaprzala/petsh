@@ -1,0 +1,201 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+body {
+  font-family: 'Cairo';
+}
+
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+:root {
+  --first-color: #2e6969;
+  --second-color: #1e4444;
+  --desktop-background: url(../../img/background.png);
+  --desktop-background-full: url(../../img/full-background.png);
+  --mobile-background-full: url(../../img/full-background-mobile.png);
+}
+
+.dark-mode {
+  --first-color: #1a3b3b;
+  --second-color: #1e4444;
+  --desktop-background: url(../../img/background-darkmode.png);
+  --desktop-background-full: url(../../img/full-background-dark.png);
+  --mobile-background-full: url(../../img/full-background-mobile-dark.png);
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  background: var(--desktop-background);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.search-container {
+  background: var(--desktop-background-full);
+}
+
+.search-container-navigation-lens,
+.search-container-navigation-profile,
+.search-container-navigation-chat {
+  height: 3.3rem;
+  align-self: center;
+}
+
+.search-container-navigation-lens:hover,
+.search-container-navigation-profile:hover,
+.search-container-navigation-chat:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.search-container-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 85%;
+}
+
+.search-container-cards-dislike,
+.search-container-cards-like {
+  width: 5rem;
+  height: 5rem;
+  cursor: pointer;
+}
+
+.search-container-cards-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 25rem;
+  min-height: 35rem;
+  border-radius: 1rem;
+  background: var(--second-color);
+  margin: 0 2% 0 2%;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
+}
+
+.search-container-cards-card-photos {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 80%;
+}
+
+.search-container-cards-card-photos-person,
+.search-container-cards-card-photos-animal {
+  width: 100%;
+  height: auto;
+}
+
+.search-container-cards-card-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  height: 20%;
+  color: white;
+  line-height: 2rem;
+  padding-left: 5%;
+}
+
+.search-container-cards-card-description-person,
+.search-container-cards-card-description-animal,
+.search-container-cards-card-description-city {
+  width: 100%;
+  height: auto;
+  font-size: 1.8rem;
+}
+
+.search-container-cards-card-description-person-name,
+.search-container-cards-card-description-city-name {
+  padding-left: 1.2%;
+}
+
+.search-container-cards-card-description-person-age,
+.search-container-cards-card-description-animal-age {
+  opacity: 0.6;
+}
+
+.search-container-cards-card-description-person-icon,
+.search-container-cards-card-description-animal-icon,
+.search-container-cards-card-description-city-icon {
+  height: 1.1rem;
+  margin-right: 1%;
+}
+
+.search-container-cards-mobile-likes {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) and (min-width: 431px) {
+  .search-container {
+    background: var(--mobile-background-full);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+
+  .search-container-cards-card {
+    min-width: 20rem;
+  }
+}
+
+@media only screen and (max-device-width: 430px) {
+  .search-container {
+    background: var(--mobile-background-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-container-navigation-lens,
+  .search-container-navigation-profile,
+  .search-container-navigation-chat {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .search-container-cards {
+    order: 0;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 94%;
+    width: 90%;
+    padding-top: 8%;
+  }
+
+  .search-container-cards-card {
+    margin: 0;
+  }
+
+  .search-container-cards-like,
+  .search-container-cards-dislike {
+    display: none;
+  }
+
+  .search-container-cards-mobile-likes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .search-container-cards-mobile-likes-like,
+  .search-container-cards-mobile-likes-dislike {
+    height: 5rem;
+    width: 5rem;
+  }
+}

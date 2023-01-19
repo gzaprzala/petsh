@@ -1,5 +1,5 @@
 <head>
-  <link rel="stylesheet" type="text/css" href="public/css/footer.css" />
+  <link rel="stylesheet" type="text/css" href="public/css/views/components/footer.css" />
 </head>
 <div class="container-footer">
   <div class="container-footer-socials">

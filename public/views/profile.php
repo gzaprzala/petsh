@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="public/css/profile.css" />
+  <link rel="stylesheet" type="text/css" href="public/css/views/profile.css" />
   <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet" />
   <link href="https://fonts.cdnfonts.com/css/bluetea" rel="stylesheet" />
   <meta charset="UTF-8">

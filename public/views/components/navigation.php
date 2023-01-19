@@ -1,5 +1,5 @@
 <head>
-  <link rel="stylesheet" type="text/css" href="public/css/navigation.css" />
+  <link rel="stylesheet" type="text/css" href="public/css/views/components/navigation.css" />
 </head>
 <div class="container-navigation">
   <a href="search" class="a-centered">
