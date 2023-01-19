@@ -29,4 +29,10 @@
     height: 6%;
     order: 1;
   }
+
+  .a-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }

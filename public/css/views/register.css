@@ -144,6 +144,10 @@ a:visited {
   cursor: pointer;
 }
 
+.no-valid {
+  background: #fc2929;
+}
+
 @media only screen and (max-width: 900px) and (min-width: 431px) {
   .container-main-register {
     padding-top: 15%;
