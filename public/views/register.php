@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="public/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="public/css/views/register.css" />
   <link href="https://fonts.googleapis.com/css?family=Cairo" rel="stylesheet" />
   <link href="https://fonts.cdnfonts.com/css/bluetea" rel="stylesheet" />
   <meta charset="UTF-8">
@@ -20,15 +20,15 @@
         <a href="register" class="container-main-register-buttons-signup active">SIGN UP</a>
       </div>
       <form action="register" method="POST" class="container-main-register-form">
-          <div class="container-main-login-form-messages">
-            <?php
-            if (isset($messages)) {
-              foreach ($messages as $message) {
-                echo $message;
-              }
+        <div class="container-main-login-form-messages">
+          <?php
+          if (isset($messages)) {
+            foreach ($messages as $message) {
+              echo $message;
             }
-            ?>
-          </div>
+          }
+          ?>
+        </div>
         <input name="username" type="text" placeholder="login" class="container-main-register-form-username">
         <input name="email" type="text" placeholder="email" class="container-main-register-form-email">
         <input name="password" type="password" placeholder="password" class="container-main-register-form-password">
