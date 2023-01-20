@@ -9,7 +9,7 @@ Routing::get('', 'DefaultController');
 Routing::get('login', 'DefaultController');
 Routing::get('register', 'DefaultController');
 Routing::get('search', 'SearchController');
-Routing::get('chat', 'DefaultController');
+Routing::get('chat', 'MessengerController');
 Routing::get('profile', 'ProfileController');
 Routing::get('logout', 'SecurityController');
 Routing::post('login', 'SecurityController');

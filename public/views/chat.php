@@ -17,7 +17,8 @@
     <div class="chat-container-main">
       <div class="chat-container-main-left">
         <div class="chat-container-main-left-user1">
-          <img src="public/img/person-profile-pic.png" alt="user1-photo" class="chat-container-main-left-user1-photo">
+          <!-- <img src="public/img/person-profile-pic.png" alt="user1-photo" class="chat-container-main-left-user1-photo"> -->
+          <img class="chat-container-main-left-user1-photo" src="public/uploads/<?= $photo->getPhoto(); ?>" alt="photo">
         </div>
       </div>
       <div class="chat-container-main-right">
