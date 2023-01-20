@@ -18,14 +18,15 @@
       <img src="public/img/dislike.svg" alt="dislike" class="search-container-cards-dislike">
       <div class="search-container-cards-card">
         <div class="search-container-cards-card-photos">
-          <img src="public/img/person.png" alt="person" class="search-container-cards-card-photos-person">
+          <!-- <img src="public/img/person.png" alt="person" class="search-container-cards-card-photos-person"> -->
+          <img class="search-container-cards-card-photos-person" src="public/uploads/<?= $photo->getPhoto(); ?>" alt="photo">
           <img src="public/img/animal.png" alt="animal" class="search-container-cards-card-photos-animal">
         </div>
         <div class="search-container-cards-card-description">
           <div class="search-container-cards-card-description-person">
             <img src="public/img/person-avatar.svg" alt="person-icon" class="search-container-cards-card-description-person-icon">
-            <span class="search-container-cards-card-description-person-name">Matthew</span>
-            <span class="search-container-cards-card-description-person-age">25</span>
+            <span class="search-container-cards-card-description-person-name"><?= $userInfo->getName(); ?></span>
+            <span class="search-container-cards-card-description-person-age"><?= $userInfo->getAge(); ?></span>
           </div>
           <div class="search-container-cards-card-description-animal">
             <img src="public/img/animal-avatar.svg" alt="animal-icon" class="search-container-cards-card-description-animal-icon">
@@ -34,7 +35,7 @@
           </div>
           <div class="search-container-cards-card-description-city">
             <img src="public/img/pin.svg" alt="pin" class="search-container-cards-card-description-city-icon">
-            <span class="search-container-cards-card-description-city-name">Cracow</span>
+            <span class="search-container-cards-card-description-city-name"><?= $userInfo->getCity(); ?></span>
           </div>
         </div>
       </div>

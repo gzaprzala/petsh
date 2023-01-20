@@ -58,6 +58,13 @@ a:visited {
   border-radius: 3rem;
 }
 
+.profile-container-main-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .profile-container-main-apply {
   height: 3rem;
   width: 9rem;
@@ -71,6 +78,25 @@ a:visited {
 }
 
 .profile-container-main-apply:hover {
+  cursor: pointer;
+}
+
+.profile-container-main-logout {
+  height: 3rem;
+  width: 9rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  color: white;
+  background: rgb(196, 49, 49);
+  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-container-main-logout:hover {
   cursor: pointer;
 }
 

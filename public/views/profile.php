@@ -17,31 +17,32 @@
     <div class="profile-container-main">
       <div class="profile-container-main-photo">
         <?php include "public/views/components/photo-upload.php" ?>
-        <img class="profile-container-main-photo-photo" src="public/uploads/<?php echo $photo->getPersonPhoto() ?>" alt="photo">
+        <img class="profile-container-main-photo-photo" src="public/uploads/<?= $photo->getPhoto(); ?>" alt="photo">
       </div>
-      <form action="userInfoUpload" method="POST">
+      <form class="profile-container-main-form" action="userInfoUpload" method="POST">
         <div class="profile-container-main-name">Name
           <div class="profile-container-main-name-form" method="POST">
-            <input name="name" type="text" class="profile-container-main-name-form-update" placeholder="Enter new name...">
+            <input name="name" type="text" class="profile-container-main-name-form-update" value=<?= $userInfo->getName(); ?>>
           </div>
         </div>
         <div class="profile-container-main-age">Age
           <div class="profile-container-main-age-form" method="POST">
-            <input name="age" type="text" class="profile-container-main-age-form-update" placeholder="Enter new age...">
+            <input name="age" type="text" class="profile-container-main-age-form-update" value=<?= $userInfo->getAge(); ?>>
           </div>
         </div>
         <div class="profile-container-main-city">City
           <div class="profile-container-main-city-form" method="POST">
-            <input name="city" type="text" class="profile-container-main-city-form-update" placeholder="Enter new city...">
+            <input name="city" type="text" class="profile-container-main-city-form-update" value=<?= $userInfo->getCity(); ?>>
           </div>
         </div>
-      </form>
-      <div class="profile-container-main-password">New password
-        <div class="profile-container-main-password-form" method="POST">
-          <input type="password" class="profile-container-main-password-form-update" placeholder="Enter new password...">
+        <div class="profile-container-main-password">New password
+          <div class="profile-container-main-password-form" method="POST">
+            <input type="password" class="profile-container-main-password-form-update" placeholder="Enter new password...">
+          </div>
         </div>
-      </div>
-      <button class="profile-container-main-apply">Apply</button>
+        <button class="profile-container-main-apply">Apply</button>
+      </form>
+      <a href="logout" class="profile-container-main-logout">LOG OUT</a>
     </div>
   </div>
   <script src="public/js/darkMode.js"></script>

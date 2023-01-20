@@ -3,6 +3,7 @@
 require_once 'AppController.php';
 require_once __DIR__ . '/../models/UserPhoto.php';
 require_once __DIR__ . '/../repository/UserPhotoRepository.php';
+require_once __DIR__ . '/../repository/UserInfoRepository.php';
 require_once __DIR__ . '/../models/UserInfo.php';
 
 class ProfileController extends AppController {
@@ -11,14 +12,27 @@ class ProfileController extends AppController {
   const UPLOAD_DIRECTORY = '/../public/uploads/';
 
   private $messages = [];
+  private $id;
   private $userPhotoRepository;
+  private $userInfoRepository;
 
   public function __construct() {
     parent::__construct();
     $this->userPhotoRepository = new UserPhotoRepository();
+    $this->userInfoRepository = new UserInfoRepository();
+    session_start();
+  }
+
+  public function profile() {
+    $this->id = $_SESSION['id'];
+    $photo = $this->userPhotoRepository->getPhoto($this->id);
+    $userInfo = $this->userInfoRepository->getUserInfo($this->id);
+
+    return $this->render('profile', ['photo' => $photo, 'userInfo' => $userInfo]);
   }
 
   public function photoUpload() {
+    $this->id = $_SESSION['id'];
     if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
       move_uploaded_file(
         $_FILES['file']['tmp_name'],
@@ -26,11 +40,19 @@ class ProfileController extends AppController {
       );
 
       $photo = new UserPhoto($_FILES['file']['name']);
-      $this->userPhotoRepository->addPhoto($photo);
+      $this->userPhotoRepository->addPhoto($photo, $this->id);
 
-      return $this->render('profile', ['messages' => $this->messages, 'photo' => $photo]);
+      return $this->profile();
     }
     return $this->render('profile', ['messages' => $this->messages]);
+  }
+
+  public function userInfoUpload() {
+    $this->id = $_SESSION['id'];
+    $userInfo = new UserInfo($_POST['name'], $_POST['age'], $_POST['city']);
+    $this->userInfoRepository->addUserInfo($userInfo, $this->id);
+
+    return $this->profile();
   }
 
   private function validate(array $file): bool {

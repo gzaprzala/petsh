@@ -1,17 +1,17 @@
 <?php
 
 class UserPhoto {
-  private $personPhoto;
+  private $photo;
 
-  public function __construct($personPhoto) {
-    $this->personPhoto = $personPhoto;
+  public function __construct($photo) {
+    $this->photo = $photo;
   }
 
-  public function getPersonPhoto() {
-    return $this->personPhoto;
+  public function getPhoto() {
+    return $this->photo;
   }
 
-  public function setPersonPhoto($personPhoto) {
-    $this->personPhoto = $personPhoto;
+  public function setPhoto($photo) {
+    $this->photo = $photo;
   }
 }
