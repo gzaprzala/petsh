@@ -24,6 +24,11 @@ class ProfileController extends AppController {
   }
 
   public function profile() {
+    if (!isset($_SESSION['id']) || empty($_SESSION['id'])) {
+      header("Location: login");
+      exit;
+    }
+
     $this->id = $_SESSION['id'];
     $photo = $this->userPhotoRepository->getPhoto($this->id);
     $userInfo = $this->userInfoRepository->getUserInfo($this->id);
