@@ -18,13 +18,13 @@ class UserAnimalRepository extends Repository {
     }
 
     return new UserAnimal(
-      $photo['photo'],
+      $photo['animal_photo'],
     );
   }
 
   public function addPhoto(UserAnimal $photo, int $user_id): void {
     $stmt = $this->database->connect()->prepare('
-      UPDATE animals_photos SET photo = :photo WHERE user_id = :user_id
+      UPDATE animals_photos SET animal_photo = :photo WHERE user_id = :user_id
     ');
 
     $stmt->bindParam(':photo', $photo->getPhoto());

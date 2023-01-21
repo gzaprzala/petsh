@@ -19,14 +19,14 @@ class UserAnimalInfoRepository extends Repository {
     }
 
     return new UserAnimalInfo(
-      $user['name'],
-      $user['age'],
+      $user['animal_name'],
+      $user['animal_age'],
     );
   }
 
   public function addUserAnimalInfo(UserAnimalInfo $user, int $user_id): void {
     $stmt = $this->database->connect()->prepare('
-      UPDATE animals_details SET name = :name, age = :age WHERE user_id = :user_id
+      UPDATE animals_details SET animal_name = :name, animal_age = :age WHERE user_id = :user_id
     ');
 
     $stmt->bindParam(':name', $user->getName());

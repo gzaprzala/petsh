@@ -16,27 +16,31 @@
     <?php include "public/views/components/navigation.php" ?>
     <div class="search-container-cards">
       <img src="public/img/dislike.svg" alt="dislike" class="search-container-cards-dislike">
-      <div class="search-container-cards-card">
-        <div class="search-container-cards-card-photos">
-          <img class="search-container-cards-card-photos-person" src="public/uploads/<?= $photo->getPhoto(); ?>" alt="photo">
-          <img class="search-container-cards-card-photos-animal" src="public/uploads/<?= $userAnimal->getPhoto(); ?>" alt="photo">
-        </div>
-        <div class="search-container-cards-card-description">
-          <div class="search-container-cards-card-description-person">
-            <img src="public/img/person-avatar.svg" alt="person-icon" class="search-container-cards-card-description-person-icon">
-            <span class="search-container-cards-card-description-person-name"><?= $userInfo->getName(); ?></span>
-            <span class="search-container-cards-card-description-person-age"><?= $userInfo->getAge(); ?></span>
+      <div class="search-container-cards-card-parent">
+        <?php foreach ($searchCards as $searchCard) : ?>
+          <div class="search-container-cards-card">
+            <div class="search-container-cards-card-photos">
+              <img class="search-container-cards-card-photos-person" src="public/uploads/<?= $searchCard->getPersonPhoto(); ?>" alt="photo">
+              <img class="search-container-cards-card-photos-animal" src="public/uploads/<?= $searchCard->getPersonAnimalPhoto(); ?>" alt="photo">
+            </div>
+            <div class="search-container-cards-card-description">
+              <div class="search-container-cards-card-description-person">
+                <img src="public/img/person-avatar.svg" alt="person-icon" class="search-container-cards-card-description-person-icon">
+                <span class="search-container-cards-card-description-person-name"><?= $searchCard->getPersonName(); ?></span>
+                <span class="search-container-cards-card-description-person-age"><?= $searchCard->getPersonAge(); ?></span>
+              </div>
+              <div class="search-container-cards-card-description-animal">
+                <img src="public/img/animal-avatar.svg" alt="animal-icon" class="search-container-cards-card-description-animal-icon">
+                <span class="search-container-cards-card-description-animal-name"><?= $searchCard->getPersonAnimalName(); ?></span>
+                <span class="search-container-cards-card-description-animal-age"><?= $searchCard->getPersonAnimalAge(); ?></span>
+              </div>
+              <div class="search-container-cards-card-description-city">
+                <img src="public/img/pin.svg" alt="pin" class="search-container-cards-card-description-city-icon">
+                <span class="search-container-cards-card-description-city-name"><?= $searchCard->getPersonCity(); ?></span>
+              </div>
+            </div>
           </div>
-          <div class="search-container-cards-card-description-animal">
-            <img src="public/img/animal-avatar.svg" alt="animal-icon" class="search-container-cards-card-description-animal-icon">
-            <span class="search-container-cards-card-description-animal-name"><?= $userAnimalInfo->getName(); ?></span>
-            <span class="search-container-cards-card-description-animal-age"><?= $userAnimalInfo->getAge(); ?></span>
-          </div>
-          <div class="search-container-cards-card-description-city">
-            <img src="public/img/pin.svg" alt="pin" class="search-container-cards-card-description-city-icon">
-            <span class="search-container-cards-card-description-city-name"><?= $userInfo->getCity(); ?></span>
-          </div>
-        </div>
+        <?php endforeach; ?>
       </div>
       <img src="public/img/like.svg" alt="like" class="search-container-cards-like">
       <div class="search-container-cards-mobile-likes">
