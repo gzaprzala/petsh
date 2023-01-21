@@ -1,0 +1,38 @@
+<?php
+
+require_once 'Repository.php';
+require_once __DIR__ . '/../models/UserAnimalInfo.php';
+
+class UserAnimalInfoRepository extends Repository {
+  public function getUserAnimalInfo(int $user_id): ?UserAnimalInfo {
+    $stmt = $this->database->connect()->prepare('
+      SELECT * FROM animals_details WHERE user_id = :user_id
+    ');
+
+    $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+    $stmt->execute();
+
+    $user = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if ($user == false) {
+      return null;
+    }
+
+    return new UserAnimalInfo(
+      $user['name'],
+      $user['age'],
+    );
+  }
+
+  public function addUserAnimalInfo(UserAnimalInfo $user, int $user_id): void {
+    $stmt = $this->database->connect()->prepare('
+      UPDATE animals_details SET name = :name, age = :age WHERE user_id = :user_id
+    ');
+
+    $stmt->bindParam(':name', $user->getName());
+    $stmt->bindParam(':age', $user->getAge());
+    $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
+
+    $stmt->execute();
+  }
+}

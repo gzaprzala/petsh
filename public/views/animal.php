@@ -23,6 +23,19 @@
         <?php include "public/views/components/animal-upload.php" ?>
         <img class="animal-container-main-photo-photo" src="public/uploads/<?= $userAnimal->getPhoto(); ?>" alt="photo">
       </div>
+      <form class="animal-container-main-form" action="userAnimalInfoUpload" method="POST">
+        <div class="animal-container-main-name">Name
+          <div class="animal-container-main-name-form" method="POST">
+            <input name="name" type="text" class="animal-container-main-name-form-update" value=<?= $userAnimalInfo->getName(); ?>>
+          </div>
+        </div>
+        <div class="animal-container-main-age">Age
+          <div class="animal-container-main-age-form" method="POST">
+            <input name="age" type="text" class="animal-container-main-age-form-update" value=<?= $userAnimalInfo->getAge(); ?>>
+          </div>
+        </div>
+        <button class="animal-container-main-apply">Apply</button>
+      </form>
     </div>
   </div>
   <script src="public/js/darkMode.js"></script>

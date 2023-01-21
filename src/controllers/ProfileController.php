@@ -4,9 +4,11 @@ require_once 'AppController.php';
 require_once __DIR__ . '/../models/UserPhoto.php';
 require_once __DIR__ . '/../models/UserInfo.php';
 require_once __DIR__ . '/../models/UserAnimal.php';
+require_once __DIR__ . '/../models/UserAnimalInfo.php';
 require_once __DIR__ . '/../repository/UserPhotoRepository.php';
 require_once __DIR__ . '/../repository/UserInfoRepository.php';
 require_once __DIR__ . '/../repository/UserAnimalRepository.php';
+require_once __DIR__ . '/../repository/UserAnimalInfoRepository.php';
 
 class ProfileController extends AppController {
   const MAX_FILE_SIZE = 1024 * 1024;
@@ -18,12 +20,14 @@ class ProfileController extends AppController {
   private $userPhotoRepository;
   private $userInfoRepository;
   private $userAnimalRepository;
+  private $userAnimalInfoRepository;
 
   public function __construct() {
     parent::__construct();
     $this->userPhotoRepository = new UserPhotoRepository();
     $this->userInfoRepository = new UserInfoRepository();
     $this->userAnimalRepository = new UserAnimalRepository();
+    $this->userAnimalInfoRepository = new UserAnimalInfoRepository();
     session_start();
   }
 
@@ -36,9 +40,8 @@ class ProfileController extends AppController {
     $this->id = $_SESSION['id'];
     $photo = $this->userPhotoRepository->getPhoto($this->id);
     $userInfo = $this->userInfoRepository->getUserInfo($this->id);
-    $userAnimal = $this->userAnimalRepository->getPhoto($this->id);
 
-    return $this->render('profile', ['photo' => $photo, 'userInfo' => $userInfo, 'userAnimal' => $userAnimal]);
+    return $this->render('profile', ['photo' => $photo, 'userInfo' => $userInfo]);
   }
 
   public function animal() {
@@ -49,8 +52,9 @@ class ProfileController extends AppController {
 
     $this->id = $_SESSION['id'];
     $userAnimal = $this->userAnimalRepository->getPhoto($this->id);
+    $userAnimalInfo = $this->userAnimalInfoRepository->getUserAnimalInfo($this->id);
 
-    return $this->render('animal', ['userAnimal' => $userAnimal]);
+    return $this->render('animal', ['userAnimal' => $userAnimal, 'userAnimalInfo' => $userAnimalInfo]);
   }
 
   public function photoUpload() {
@@ -81,6 +85,14 @@ class ProfileController extends AppController {
     $this->id = $_SESSION['id'];
     $userAnimal = new UserAnimal($_POST['animal']);
     $this->userAnimalRepository->addPhoto($userAnimal, $this->id);
+
+    return $this->animal();
+  }
+
+  public function userAnimalInfoUpload() {
+    $this->id = $_SESSION['id'];
+    $userAnimal = new UserAnimalInfo($_POST['name'], $_POST['age']);
+    $this->userAnimalInfoRepository->addUserAnimalInfo($userAnimal, $this->id);
 
     return $this->animal();
   }

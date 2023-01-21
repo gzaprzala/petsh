@@ -29,8 +29,8 @@
           </div>
           <div class="search-container-cards-card-description-animal">
             <img src="public/img/animal-avatar.svg" alt="animal-icon" class="search-container-cards-card-description-animal-icon">
-            <span class="search-container-cards-card-description-animal-name">Bart</span>
-            <span class="search-container-cards-card-description-animal-age">8</span>
+            <span class="search-container-cards-card-description-animal-name"><?= $userAnimalInfo->getName(); ?></span>
+            <span class="search-container-cards-card-description-animal-age"><?= $userAnimalInfo->getAge(); ?></span>
           </div>
           <div class="search-container-cards-card-description-city">
             <img src="public/img/pin.svg" alt="pin" class="search-container-cards-card-description-city-icon">

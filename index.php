@@ -18,5 +18,6 @@ Routing::post('register', 'SecurityController');
 Routing::post('photoUpload', 'ProfileController');
 Routing::post('userInfoUpload', 'ProfileController');
 Routing::post('userAnimalUpload', 'ProfileController');
+Routing::post('userAnimalInfoUpload', 'ProfileController');
 
 Routing::run($path);
