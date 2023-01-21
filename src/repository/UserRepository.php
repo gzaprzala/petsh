@@ -55,5 +55,14 @@ class UserRepository extends Repository {
     $stmt->execute([
       $id
     ]);
+
+    $stmt = $this->database->connect()->prepare('
+      INSERT INTO animals_photos (user_id)
+      VALUES (?)
+    ');
+
+    $stmt->execute([
+      $id
+    ]);
   }
 }

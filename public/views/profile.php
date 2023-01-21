@@ -14,6 +14,10 @@
 <body>
   <div class="profile-container">
     <?php include "public/views/components/navigation.php" ?>
+    <div class="profile-container-main-buttons">
+      <a href="profile" class="profile-container-main-buttons-person active">PERSON</a>
+      <a href="animal" class="profile-container-main-buttons-animal">ANIMAL</a>
+    </div>
     <div class="profile-container-main">
       <div class="profile-container-main-photo">
         <?php include "public/views/components/photo-upload.php" ?>

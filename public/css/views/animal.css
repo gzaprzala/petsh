@@ -30,7 +30,7 @@ a:visited {
   --mobile-background-full: url(../../img/full-background-mobile-dark.png);
 }
 
-.profile-container {
+.animal-container {
   display: flex;
   flex-direction: column;
   width: 100vw;
@@ -41,11 +41,11 @@ a:visited {
   background-size: 100% 100%;
 }
 
-.profile-container {
+.animal-container {
   background: var(--desktop-background-full);
 }
 
-.profile-container-main {
+.animal-container-main {
   align-self: center;
   display: flex;
   flex-direction: column;
@@ -58,14 +58,14 @@ a:visited {
   border-radius: 3rem;
 }
 
-.profile-container-main-form {
+.animal-container-main-form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.profile-container-main-apply {
+.animal-container-main-apply {
   height: 3rem;
   width: 9rem;
   margin-top: 1rem;
@@ -77,11 +77,11 @@ a:visited {
   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
 }
 
-.profile-container-main-apply:hover {
+.animal-container-main-apply:hover {
   cursor: pointer;
 }
 
-.profile-container-main-logout {
+.animal-container-main-logout {
   height: 3rem;
   width: 9rem;
   margin-top: 1rem;
@@ -96,15 +96,15 @@ a:visited {
   justify-content: center;
 }
 
-.profile-container-main-logout:hover {
+.animal-container-main-logout:hover {
   cursor: pointer;
 }
 
-.profile-container-main-photo,
-.profile-container-main-name,
-.profile-container-main-age,
-.profile-container-main-city,
-.profile-container-main-password {
+.animal-container-main-photo,
+.animal-container-main-name,
+.animal-container-main-age,
+.animal-container-main-city,
+.animal-container-main-password {
   font-size: 1.5rem;
   height: 7rem;
   width: 17rem;
@@ -112,11 +112,11 @@ a:visited {
   text-align: center;
 }
 
-.profile-container-main-photo-form-update,
-.profile-container-main-name-form-update,
-.profile-container-main-age-form-update,
-.profile-container-main-city-form-update,
-.profile-container-main-password-form-update {
+.animal-container-main-photo-form-update,
+.animal-container-main-name-form-update,
+.animal-container-main-age-form-update,
+.animal-container-main-city-form-update,
+.animal-container-main-password-form-update {
   /* border-radius: 0.5rem; */
   height: 2rem;
   padding-left: 1%;
@@ -130,15 +130,15 @@ a:visited {
   color: white;
 }
 
-.profile-container-main-name-form-update::placeholder,
-.profile-container-main-age-form-update::placeholder,
-.profile-container-main-city-form-update::placeholder,
-.profile-container-main-password-form-update::placeholder {
+.animal-container-main-name-form-update::placeholder,
+.animal-container-main-age-form-update::placeholder,
+.animal-container-main-city-form-update::placeholder,
+.animal-container-main-password-form-update::placeholder {
   color: white;
   opacity: 0.5;
 }
 
-.profile-container-main-photo {
+.animal-container-main-photo {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -161,7 +161,7 @@ input[type=file]::file-selector-button:hover {
   cursor: pointer;
 }
 
-.profile-container-main-photo-update {
+.animal-container-main-photo-update {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -171,7 +171,7 @@ input[type=file]::file-selector-button:hover {
   font-size: 1.5rem;
 }
 
-.profile-container-main-photo-update-input {
+.animal-container-main-photo-update-input {
   height: 1.7rem;
   width: 6rem;
   margin-top: 1rem;
@@ -183,7 +183,7 @@ input[type=file]::file-selector-button:hover {
   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
 }
 
-.profile-container-main-photo-update-upload {
+.animal-container-main-photo-update-upload {
   height: 1.7rem;
   width: 6rem;
   margin-top: 1rem;
@@ -195,24 +195,24 @@ input[type=file]::file-selector-button:hover {
   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
 }
 
-.profile-container-main-photo-update-upload:hover {
+.animal-container-main-photo-update-upload:hover {
   cursor: pointer;
 }
 
-.profile-container-main-photo-photo {
+.animal-container-main-photo-photo {
   height: 3rem;
   width: 3rem;
 }
 
-.profile-container-main-buttons {
+.animal-container-main-buttons {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
 
-.profile-container-main-buttons-person,
-.profile-container-main-buttons-animal {
+.animal-container-main-buttons-person,
+.animal-container-main-buttons-animal {
   width: 10rem;
   height: 3rem;
   background: white;
@@ -227,28 +227,28 @@ input[type=file]::file-selector-button:hover {
   font-size: 1.4rem;
 }
 
-.profile-container-main-buttons-person:hover,
-.profile-container-main-buttons-animal:hover {
+.animal-container-main-buttons-person:hover,
+.animal-container-main-buttons-animal:hover {
   background: #ffffff70;
   cursor: pointer;
 }
 
-.profile-container-main-buttons-person.active,
-.profile-container-main-buttons-animal.active {
+.animal-container-main-buttons-person.active,
+.animal-container-main-buttons-animal.active {
   background: #ffffff70;
   cursor: pointer;
 }
 
-.profile-container-main-buttons-person {
+.animal-container-main-buttons-person {
   border-radius: 1rem 0 0 0rem;
 }
 
-.profile-container-main-buttons-animal {
+.animal-container-main-buttons-animal {
   border-radius: 0 1rem 0rem 0;
 }
 
 @media only screen and (max-device-width: 430px) {
-  .profile-container-main {
+  .animal-container-main {
     height: 94%;
   }
 }

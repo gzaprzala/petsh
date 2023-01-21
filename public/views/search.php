@@ -18,9 +18,8 @@
       <img src="public/img/dislike.svg" alt="dislike" class="search-container-cards-dislike">
       <div class="search-container-cards-card">
         <div class="search-container-cards-card-photos">
-          <!-- <img src="public/img/person.png" alt="person" class="search-container-cards-card-photos-person"> -->
           <img class="search-container-cards-card-photos-person" src="public/uploads/<?= $photo->getPhoto(); ?>" alt="photo">
-          <img src="public/img/animal.png" alt="animal" class="search-container-cards-card-photos-animal">
+          <img class="search-container-cards-card-photos-animal" src="public/uploads/<?= $userAnimal->getPhoto(); ?>" alt="photo">
         </div>
         <div class="search-container-cards-card-description">
           <div class="search-container-cards-card-description-person">

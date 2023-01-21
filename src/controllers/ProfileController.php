@@ -2,9 +2,11 @@
 
 require_once 'AppController.php';
 require_once __DIR__ . '/../models/UserPhoto.php';
+require_once __DIR__ . '/../models/UserInfo.php';
+require_once __DIR__ . '/../models/UserAnimal.php';
 require_once __DIR__ . '/../repository/UserPhotoRepository.php';
 require_once __DIR__ . '/../repository/UserInfoRepository.php';
-require_once __DIR__ . '/../models/UserInfo.php';
+require_once __DIR__ . '/../repository/UserAnimalRepository.php';
 
 class ProfileController extends AppController {
   const MAX_FILE_SIZE = 1024 * 1024;
@@ -15,11 +17,13 @@ class ProfileController extends AppController {
   private $id;
   private $userPhotoRepository;
   private $userInfoRepository;
+  private $userAnimalRepository;
 
   public function __construct() {
     parent::__construct();
     $this->userPhotoRepository = new UserPhotoRepository();
     $this->userInfoRepository = new UserInfoRepository();
+    $this->userAnimalRepository = new UserAnimalRepository();
     session_start();
   }
 
@@ -32,8 +36,21 @@ class ProfileController extends AppController {
     $this->id = $_SESSION['id'];
     $photo = $this->userPhotoRepository->getPhoto($this->id);
     $userInfo = $this->userInfoRepository->getUserInfo($this->id);
+    $userAnimal = $this->userAnimalRepository->getPhoto($this->id);
 
-    return $this->render('profile', ['photo' => $photo, 'userInfo' => $userInfo]);
+    return $this->render('profile', ['photo' => $photo, 'userInfo' => $userInfo, 'userAnimal' => $userAnimal]);
+  }
+
+  public function animal() {
+    if (!isset($_SESSION['id']) || empty($_SESSION['id'])) {
+      header("Location: login");
+      exit;
+    }
+
+    $this->id = $_SESSION['id'];
+    $userAnimal = $this->userAnimalRepository->getPhoto($this->id);
+
+    return $this->render('animal', ['userAnimal' => $userAnimal]);
   }
 
   public function photoUpload() {
@@ -58,6 +75,14 @@ class ProfileController extends AppController {
     $this->userInfoRepository->addUserInfo($userInfo, $this->id);
 
     return $this->profile();
+  }
+
+  public function userAnimalUpload() {
+    $this->id = $_SESSION['id'];
+    $userAnimal = new UserAnimal($_POST['animal']);
+    $this->userAnimalRepository->addPhoto($userAnimal, $this->id);
+
+    return $this->animal();
   }
 
   private function validate(array $file): bool {

@@ -11,10 +11,12 @@ Routing::get('register', 'DefaultController');
 Routing::get('search', 'SearchController');
 Routing::get('chat', 'MessengerController');
 Routing::get('profile', 'ProfileController');
+Routing::get('animal', 'ProfileController');
 Routing::get('logout', 'SecurityController');
 Routing::post('login', 'SecurityController');
 Routing::post('register', 'SecurityController');
 Routing::post('photoUpload', 'ProfileController');
 Routing::post('userInfoUpload', 'ProfileController');
+Routing::post('userAnimalUpload', 'ProfileController');
 
 Routing::run($path);
