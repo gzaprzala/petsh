@@ -9,6 +9,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Register / Petsh</title>
+  <script src="public/js/darkMode.js" defer></script>
+  <script src="public/js/validation.js" defer></script>
 </head>
 
 <body>
@@ -38,8 +40,6 @@
     </div>
     <?php include "public/views/components/footer.php" ?>
   </div>
-  <script src="public/js/darkMode.js"></script>
-  <script src="public/js/validation.js"></script>
 </body>
 
 </html>

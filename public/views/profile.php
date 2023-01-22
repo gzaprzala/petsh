@@ -9,6 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Profile / Petsh</title>
+  <script src="public/js/darkMode.js" defer></script>
 </head>
 
 <body>
@@ -49,7 +50,6 @@
       <a href="logout" class="profile-container-main-logout">LOG OUT</a>
     </div>
   </div>
-  <script src="public/js/darkMode.js"></script>
 </body>
 
 </html>

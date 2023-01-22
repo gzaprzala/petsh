@@ -9,6 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chat / Petsh</title>
+  <script src="public/js/darkMode.js" defer></script>
 </head>
 
 <body>
@@ -25,13 +26,21 @@
         <?php endforeach; ?>
       </div>
       <div class="chat-container-main-right">
-        <div class="chat-container-main-right-messages">
+        <div id="chat" class="chat-container-main-right-messages">
           <?php foreach ($friendsMessage as $message) : ?>
             <?php if ($message->getSenderId() == $_SESSION['id']) : ?>
-              <p><?= $message->getMessageContent() ?></p>
+              <div>
+                <p>
+                  <?= $message->getMessageContent() ?>
+                </p>
+              </div>
             <?php endif ?>
             <?php if ($message->getReceiverId() == $_SESSION['id']) : ?>
-              <p><?= $message->getMessageContent() ?></p>
+              <div>
+                <p>
+                  <?= $message->getMessageContent() ?>
+                </p>
+              </div>
             <?php endif ?>
           <?php endforeach ?>
         </div>
@@ -48,7 +57,6 @@
       </div>
     </div>
   </div>
-  <script src="public/js/darkMode.js"></script>
 </body>
 
 </html>
