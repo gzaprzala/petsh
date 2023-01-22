@@ -18,20 +18,33 @@
       <div class="chat-container-main-left">
         <?php foreach ($friendsList as $friend) : ?>
           <div class="chat-container-main-left-user1">
-            <img class="chat-container-main-left-user1-photo" src="public/uploads/<?= $friend->getPersonPhoto(); ?>" alt="photo">
+            <a href="/chat?room=<?= $friend->getId(); ?>">
+              <img class="chat-container-main-left-user1-photo" src="public/uploads/<?= $friend->getPersonPhoto(); ?>" alt="photo">
+            </a>
           </div>
         <?php endforeach; ?>
       </div>
       <div class="chat-container-main-right">
-        <div class="chat-container-main-right-messages"></div>
-        <div class="chat-container-main-right-tools">
+        <div class="chat-container-main-right-messages">
+          <?php foreach ($friendsMessage as $message) : ?>
+            <?php if ($message->getSenderId() == $_SESSION['id']) : ?>
+              <p><?= $message->getMessageContent() ?></p>
+            <?php endif ?>
+            <?php if ($message->getReceiverId() == $_SESSION['id']) : ?>
+              <p><?= $message->getMessageContent() ?></p>
+            <?php endif ?>
+          <?php endforeach ?>
+        </div>
+        <form action="addMessage" class="chat-container-main-right-tools" method="post">
           <div class="chat-container-main-right-tools-enter">
-            <span class="chat-container-main-right-tools-enter-new">Enter a message...</span>
+            <input type="hidden" name="sender_id" value="<?= $_SESSION['id']; ?>">
+            <input type="hidden" name="receiver_id" value="<?= (int)($_GET['room']); ?>">
+            <input class="chat-container-main-right-tools-enter-new" type="text" name="message_content" placeholder="Enter a message...">
             <div class="chat-container-main-right-tools-enter-send">
-              <img src="public/img/send.svg" alt="send" class="chat-container-main-right-tools-enter-send-icon">
+              <input type="image" name="submit" src="public/img/send.svg" class="chat-container-main-right-tools-enter-send-icon">
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   </div>

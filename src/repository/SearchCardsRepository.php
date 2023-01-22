@@ -5,7 +5,6 @@ require_once __DIR__ . '/../models/SearchCard.php';
 
 class SearchCardsRepository extends Repository {
   public function getSearchCards(int $user_id): ?array {
-    $searchCardsReturn = [];
     $stmt = $this->database->connect()->prepare('
       SELECT users.id as user_id, users_photos.photo, users_details.name, users_details.age,
       users_details.city, animals_photos.animal_photo, animals_details.animal_name,
@@ -22,6 +21,8 @@ class SearchCardsRepository extends Repository {
     $stmt->execute();
 
     $searchCards = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $searchCardsReturn = [];
 
     foreach ($searchCards as $searchCard) {
       $searchCardsReturn[] = new SearchCard(

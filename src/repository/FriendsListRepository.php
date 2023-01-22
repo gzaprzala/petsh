@@ -5,9 +5,8 @@ require_once __DIR__ . '/../models/FriendsList.php';
 
 class FriendsListRepository extends Repository {
   public function getFriendsList(int $user_id): ?array {
-    $friendsListReturn = [];
     $stmt = $this->database->connect()->prepare('
-      SELECT users.id as user_id, users_photos.photo 
+      SELECT users.id as user_id, users_photos.photo
       FROM users
       JOIN users_photos ON users.id = users_photos.user_id
       WHERE users.id != :user_id
@@ -17,6 +16,8 @@ class FriendsListRepository extends Repository {
     $stmt->execute();
 
     $friendsList = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    $friendsListReturn = [];
 
     foreach ($friendsList as $friend) {
       $friendsListReturn[] = new FriendsList(
