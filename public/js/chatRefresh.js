@@ -2,7 +2,9 @@ const receiver = document.querySelector("[name='receiver_id']");
 const chat = document.querySelector(".chat-container-main-right-messages");
 
 setInterval(() => {
-  fetch(`/chat?room=${receiver.value}`)
+  fetch(`/chat?room=${receiver.value}`, {
+    method: "GET",
+  })
     .then(response => response.text())
     .then(data => {
         let parser = new DOMParser();
