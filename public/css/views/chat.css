@@ -63,7 +63,8 @@ a:visited {
   width: 5%;
 }
 
-.chat-container-main-left-user1 {
+.chat-container-main-left-user1, 
+.chat-container-main-left-user1-active {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -72,7 +73,22 @@ a:visited {
   background: var(--first-color);
 }
 
+.chat-container-main-left-user1-active {
+  background: white;
+}
+
+.chat-container-main-left-user1 a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
 .chat-container-main-left-user1-photo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 5%;
   width: 80%;
   height: auto;
@@ -198,6 +214,7 @@ textarea:focus, input:focus{
     flex-direction: column-reverse;
     height: 100%;
     width: 15%;
+    padding-bottom: 12%;
   }
 
   .chat-container-main-left-user1 {

@@ -19,11 +19,19 @@
     <div class="chat-container-main">
       <div class="chat-container-main-left">
         <?php foreach ($friendsList as $friend) : ?>
-          <div class="chat-container-main-left-user1">
-            <a href="/chat?room=<?= $friend->getId(); ?>">
-              <img class="chat-container-main-left-user1-photo" src="public/uploads/<?= $friend->getPersonPhoto(); ?>" alt="photo">
-            </a>
-          </div>
+          <?php if ($friend->getId() == (int)($_GET['room'])) : ?>
+            <div class="chat-container-main-left-user1-active">
+              <a href="/chat?room=<?= $friend->getId(); ?>">
+                <img class="chat-container-main-left-user1-photo" src="public/uploads/<?= $friend->getPersonPhoto(); ?>" alt="photo">
+              </a>
+            </div>
+          <?php else : ?>
+            <div class="chat-container-main-left-user1">
+              <a href="/chat?room=<?= $friend->getId(); ?>">
+                <img class="chat-container-main-left-user1-photo" src="public/uploads/<?= $friend->getPersonPhoto(); ?>" alt="photo">
+              </a>
+            </div>
+          <?php endif ?>
         <?php endforeach; ?>
       </div>
       <div class="chat-container-main-right">
@@ -53,7 +61,7 @@
           <div class="chat-container-main-right-tools-enter">
             <input type="hidden" name="sender_id" value="<?= $_SESSION['id']; ?>">
             <input type="hidden" name="receiver_id" value="<?= (int)($_GET['room']); ?>">
-            <input class="chat-container-main-right-tools-enter-new" type="text" name="message_content" placeholder="Enter a message...">
+            <input class="chat-container-main-right-tools-enter-new" type="text" name="message_content" placeholder="Enter a message..." autocomplete="off">
             <div class="chat-container-main-right-tools-enter-send">
               <input type="image" name="submit" src="public/img/send.svg" class="chat-container-main-right-tools-enter-send-icon">
             </div>
