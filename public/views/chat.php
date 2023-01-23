@@ -10,6 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Chat / Petsh</title>
   <script src="public/js/darkMode.js" defer></script>
+  <script src="public/js/chatRefresh.js" defer></script>
 </head>
 
 <body>
@@ -28,20 +29,24 @@
       <div class="chat-container-main-right">
         <div id="chat" class="chat-container-main-right-messages">
           <?php foreach ($friendsMessage as $message) : ?>
-            <?php if ($message->getSenderId() == $_SESSION['id']) : ?>
-              <div>
-                <p>
-                  <?= $message->getMessageContent() ?>
-                </p>
-              </div>
-            <?php endif ?>
-            <?php if ($message->getReceiverId() == $_SESSION['id']) : ?>
-              <div>
-                <p>
-                  <?= $message->getMessageContent() ?>
-                </p>
-              </div>
-            <?php endif ?>
+            <div class="chat-container-main-right-messages-sender">
+              <?php if ($message->getSenderId() == $_SESSION['id']) : ?>
+                <div class="chat-container-main-right-messages-sender-message">
+                  <p>
+                    <?= $message->getMessageContent() ?>
+                  </p>
+                </div>
+              <?php endif ?>
+            </div>
+            <div class="chat-container-main-right-messages-receiver">
+              <?php if ($message->getReceiverId() == $_SESSION['id']) : ?>
+                <div class="chat-container-main-right-messages-receiver-message">
+                  <p>
+                    <?= $message->getMessageContent() ?>
+                  </p>
+                </div>
+              <?php endif ?>
+            </div>
           <?php endforeach ?>
         </div>
         <form action="addMessage" class="chat-container-main-right-tools" method="post">

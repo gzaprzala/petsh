@@ -9,7 +9,7 @@ class FriendsMessagesRepository extends Repository {
       SELECT message_content, sender_id, receiver_id FROM users_messages
       WHERE (sender_id = :sender_id AND receiver_id = :receiver_id)
       OR (sender_id = :receiver_id AND receiver_id = :sender_id)
-      ORDER BY id ASC
+      ORDER BY id DESC
     ');
 
     $stmt->bindParam(':sender_id', $sender_id, PDO::PARAM_INT);
