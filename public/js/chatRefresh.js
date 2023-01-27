@@ -3,7 +3,7 @@ const chat = document.querySelector(".chat-container-main-right-messages");
 
 setInterval(() => {
   fetch(`/chat?room=${receiver.value}`, {
-    method: "GET",
+    method: 'GET',
   })
     .then(response => response.text())
     .then(data => {
@@ -13,7 +13,7 @@ setInterval(() => {
         chat.innerHTML = specificDiv.innerHTML;
     })
     .catch(error => console.error(error));
-}, 3000);
+}, 3500);
 
 
 function updateScroll(){

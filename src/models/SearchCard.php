@@ -9,8 +9,10 @@ class SearchCard {
   private $personAnimalName;
   private $personAnimalAge;
   private $personAnimalPhoto;
+  private $personLikes;
+  private $personDislikes;
 
-  public function __construct(int $id, string $personName, int $personAge, string $personCity, string $personPhoto, string $personAnimalName, int $personAnimalAge, string $personAnimalPhoto) {
+  public function __construct(int $id, string $personName, int $personAge, string $personCity, string $personPhoto, string $personAnimalName, int $personAnimalAge, string $personAnimalPhoto, int $personLikes, int $personDislikes) {
     $this->id = $id;
     $this->personName = $personName;
     $this->personAge = $personAge;
@@ -19,6 +21,8 @@ class SearchCard {
     $this->personAnimalName = $personAnimalName;
     $this->personAnimalAge = $personAnimalAge;
     $this->personAnimalPhoto = $personAnimalPhoto;
+    $this->personLikes = $personLikes;
+    $this->personDislikes = $personDislikes;
   }
 
   public function getId(): int {
@@ -51,5 +55,13 @@ class SearchCard {
 
   public function getPersonAnimalPhoto(): string {
     return $this->personAnimalPhoto;
+  }
+
+  public function getPersonLikes(): int {
+    return $this->personLikes;
+  }
+
+  public function getPersonDislikes(): int {
+    return $this->personDislikes;
   }
 }

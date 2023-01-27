@@ -13,6 +13,8 @@ Routing::get('chat', 'MessengerController');
 Routing::get('profile', 'ProfileController');
 Routing::get('animal', 'ProfileController');
 Routing::get('logout', 'SecurityController');
+Routing::get('like', 'SearchController');
+Routing::get('dislike', 'SearchController');
 Routing::post('login', 'SecurityController');
 Routing::post('register', 'SecurityController');
 Routing::post('photoUpload', 'ProfileController');

@@ -11,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Search / Petsh</title>
   <script src="public/js/darkMode.js" defer></script>
+  <script src="public/js/reactions.js" defer></script>
 </head>
 
 <body>
@@ -37,12 +38,18 @@
               <span class="search-container-cards-card-description-city-name"><?= $searchCard->getPersonCity(); ?></span>
             </div>
           </div>
-          <div class="search-container-cards-card-reactions">
+          <div id="<?= $searchCard->getId() ?>" class="search-container-cards-card-reactions">
+            <p class="search-container-cards-card-reactions-dislikes">
+              <?= $searchCard->getPersonDislikes(); ?>
+            </p>
             <img src="public/img/dislike.svg" alt="dislike" class="search-container-cards-dislike">
             <a href="/chat?room=<?= $searchCard->getId(); ?>">
               <img src="public/img/chat-reaction.svg" alt="chat" class="search-container-cards-chat">
             </a>
             <img src="public/img/like.svg" alt="like" class="search-container-cards-like">
+            <p class="search-container-cards-card-reactions-likes">
+              <?= $searchCard->getPersonLikes(); ?>
+            </p>
           </div>
         </div>
       <?php endforeach; ?>
