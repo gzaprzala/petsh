@@ -61,89 +61,70 @@ a:visited {
 
 .search-container-cards {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   width: 100%;
   height: 85%;
-  padding-top: 2%;
-  padding-bottom: 10%;
-}
-
-.search-container-cards-dislike,
-.search-container-cards-like {
-  width: 5rem;
-  height: 5rem;
-  cursor: pointer;
+  align-items: center;
+  overflow-y: scroll;
 }
 
 .search-container-cards-card {
-  display: flex;
-  flex-direction: column;
-  min-width: 25rem;
-  min-height: 35rem;
-  border-radius: 1rem;
-  background: var(--second-color);
-  margin: 0 2% 0 2%;
-  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
-}
-
-.search-container-cards-card-photos {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 80%;
-}
-
-.search-container-cards-card-photos-person,
-.search-container-cards-card-photos-animal {
-  max-width: 100%; /* set max-width to 200px */
-  max-height: 20rem; /* set max-height to 200px */
-  width: auto;
+  width: 25rem;
   height: auto;
+  margin-top: 40px;
+  background: #215254;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+}
+
+.search-container-cards-card-photos-person, 
+.search-container-cards-card-photos-animal {
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.search-container-cards-card-photos-person {
+  border-radius: 15px 15px 0 0;
 }
 
 .search-container-cards-card-description {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
+  flex-direction: row;
   width: 100%;
-  height: 20%;
+  padding: 20px;
   color: white;
-  line-height: 2rem;
-  padding-left: 5%;
-  padding-top: 2%;
 }
 
-.search-container-cards-card-description-person,
+.search-container-cards-card-description-person, 
 .search-container-cards-card-description-animal,
 .search-container-cards-card-description-city {
+  width: 33%;
+  height: auto;
+}
+
+.search-container-cards-card-reactions {
   width: 100%;
   height: auto;
-  font-size: 1.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-.search-container-cards-card-description-person-name,
-.search-container-cards-card-description-city-name {
-  padding-left: 1.2%;
+.search-container-cards-dislike {
+  width: 5rem;
 }
 
-.search-container-cards-card-description-person-age,
-.search-container-cards-card-description-animal-age {
-  opacity: 0.6;
+.search-container-cards-like {
+  width: 5rem;
+  margin-left: 0.4rem;
 }
 
-.search-container-cards-card-description-person-icon,
-.search-container-cards-card-description-animal-icon,
-.search-container-cards-card-description-city-icon {
-  height: 1.1rem;
-  margin-right: 1%;
+.search-container-cards-chat {
+  width: 4rem;
 }
 
-.search-container-cards-mobile-likes {
-  display: none;
-}
 
 @media only screen and (max-width: 900px) and (min-width: 431px) {
   .search-container {
@@ -173,35 +154,4 @@ a:visited {
     width: 2.5rem;
   }
 
-  .search-container-cards {
-    order: 0;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 94%;
-    width: 90%;
-    padding-top: 12%;
-    padding-bottom: 0%;
-  }
-
-  .search-container-cards-card {
-    margin: 0;
-  }
-
-  .search-container-cards-like,
-  .search-container-cards-dislike {
-    display: none;
-  }
-
-  .search-container-cards-mobile-likes {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .search-container-cards-mobile-likes-like,
-  .search-container-cards-mobile-likes-dislike {
-    height: 5rem;
-    width: 5rem;
-  }
 }
