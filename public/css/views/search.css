@@ -125,7 +125,6 @@ a:visited {
   width: 4rem;
 }
 
-
 @media only screen and (max-width: 900px) and (min-width: 431px) {
   .search-container {
     background: var(--mobile-background-full);

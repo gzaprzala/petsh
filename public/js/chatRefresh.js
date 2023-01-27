@@ -13,7 +13,7 @@ setInterval(() => {
         chat.innerHTML = specificDiv.innerHTML;
     })
     .catch(error => console.error(error));
-}, 2000);
+}, 3000);
 
 
 function updateScroll(){

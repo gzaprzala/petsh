@@ -74,7 +74,7 @@ a:visited {
 }
 
 .chat-container-main-left-user1-active {
-  background: white;
+  background: rgba(0, 0, 0, 0.473);
 }
 
 .chat-container-main-left-user1 a {
@@ -90,9 +90,9 @@ a:visited {
   justify-content: center;
   align-items: center;
   padding: 5%;
-  width: 80%;
-  height: auto;
-  border-radius: 50%;
+  width: 4rem !important;
+  height: 4rem !important;
+  border-radius: 50% !important;
 }
 
 .chat-container-main-right {
@@ -125,14 +125,13 @@ a:visited {
 }
 
 .chat-container-main-right-messages-sender-message {
-  width: calc(auto + 0.1rem);
-  height: auto;
   background: rgba(78, 165, 159, 0.2);
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   color: rgba(31, 79, 81, 0.8);
-  margin: 0.5% 0;
+  margin: 1% 0;
   padding: 0 0.5%;
   border-radius: 0.8rem;
+  max-width: 80%;
 }
 
 .chat-container-main-right-messages-receiver {
@@ -142,14 +141,22 @@ a:visited {
 }
 
 .chat-container-main-right-messages-receiver-message {
-  width: calc(auto + 0.1rem);
-  height: auto;
   background: #F1F1F1;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.25);
   color: rgba(31, 79, 81, 0.8);
-  margin: 0.5% 0;
+  margin: 1% 0;
   padding: 0 0.5%;
   border-radius: 0.8rem;
+  max-width: 80%;
+}
+
+.chat-container-main-right-messages-sender-message p,
+.chat-container-main-right-messages-receiver-message p {
+  height: auto;
+  font-size: 20px;
+  padding: 0.5% 0;
+  width: 100%;
+  word-wrap: break-word;
 }
 
 .chat-container-main-right-tools {
@@ -219,7 +226,6 @@ textarea:focus, input:focus{
 
   .chat-container-main-left-user1 {
     background: var(--first-color);
-    height: 6%;
   }
 
   .chat-container-main-right {
