@@ -45,10 +45,16 @@
                     <?= $message->getMessageContent() ?>
                   </p>
                 </div>
+                <img class="chat-container-main-right-user-photo-sender" src="public/uploads/<?= $photo->getPhoto($message->getSenderId()); ?>" alt="photo">
               <?php endif ?>
             </div>
             <div class="chat-container-main-right-messages-receiver">
               <?php if ($message->getReceiverId() == $_SESSION['id']) : ?>
+                <?php foreach ($friendsList as $friend) : ?>
+                  <?php if ($friend->getId() == (int)($_GET['room'])) : ?>
+                    <img class="chat-container-main-right-user-photo-receiver" src="public/uploads/<?= $friend->getPersonPhoto(); ?>" alt="photo">
+                  <?php endif ?>
+                <?php endforeach; ?>
                 <div class="chat-container-main-right-messages-receiver-message">
                   <p>
                     <?= $message->getMessageContent() ?>
