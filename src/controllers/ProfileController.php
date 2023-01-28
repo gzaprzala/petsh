@@ -5,6 +5,8 @@ require_once __DIR__ . '/../models/UserPhoto.php';
 require_once __DIR__ . '/../models/UserInfo.php';
 require_once __DIR__ . '/../models/UserAnimal.php';
 require_once __DIR__ . '/../models/UserAnimalInfo.php';
+require_once __DIR__ . '/../models/AdminPanel.php';
+require_once __DIR__ . '/../repository/UserRepository.php';
 require_once __DIR__ . '/../repository/UserPhotoRepository.php';
 require_once __DIR__ . '/../repository/UserInfoRepository.php';
 require_once __DIR__ . '/../repository/UserAnimalRepository.php';
@@ -21,6 +23,7 @@ class ProfileController extends AppController {
   private $userInfoRepository;
   private $userAnimalRepository;
   private $userAnimalInfoRepository;
+  private $userRepository;
 
   public function __construct() {
     parent::__construct();
@@ -28,6 +31,7 @@ class ProfileController extends AppController {
     $this->userInfoRepository = new UserInfoRepository();
     $this->userAnimalRepository = new UserAnimalRepository();
     $this->userAnimalInfoRepository = new UserAnimalInfoRepository();
+    $this->userRepository = new UserRepository();
     session_start();
   }
 
@@ -40,8 +44,9 @@ class ProfileController extends AppController {
     $this->id = $_SESSION['id'];
     $photo = $this->userPhotoRepository->getPhoto($this->id);
     $userInfo = $this->userInfoRepository->getUserInfo($this->id);
+    $adminPanel = $this->userRepository->getAllUsersInfoFromView();
 
-    return $this->render('profile', ['photo' => $photo, 'userInfo' => $userInfo]);
+    return $this->render('profile', ['photo' => $photo, 'userInfo' => $userInfo, 'adminPanel' => $adminPanel]);
   }
 
   public function animal() {

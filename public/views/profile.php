@@ -11,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Profile / Petsh</title>
   <script src="public/js/darkMode.js" defer></script>
+  <script src="public/js/adminPanel.js" defer></script>
 </head>
 
 <body>
@@ -21,6 +22,12 @@
       <a href="animal" class="profile-container-main-buttons-animal">ANIMAL</a>
     </div>
     <div class="profile-container-main">
+      <?php if ($userInfo->getIsAdmin() == 1) : ?>
+        <button class="profile-container-main-admin-button">ADMIN PANEL</button>
+        <div class="profile-container-main-admin-panel">
+          <?= var_dump($userInfo->getIsAdmin()) ?>
+        </div>
+      <?php endif ?>
       <div class="profile-container-main-photo">
         <?php include "public/views/components/photo-upload.php" ?>
         <img class="profile-container-main-photo-photo" src="public/uploads/<?= $photo->getPhoto(); ?>" alt="photo">

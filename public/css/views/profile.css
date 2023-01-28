@@ -65,7 +65,8 @@ a:visited {
   align-items: center;
 }
 
-.profile-container-main-apply {
+.profile-container-main-apply,
+.profile-container-main-admin-button {
   height: 3rem;
   width: 9rem;
   margin-top: 1rem;
@@ -77,8 +78,24 @@ a:visited {
   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
 }
 
-.profile-container-main-apply:hover {
+.profile-container-main-apply:hover,
+.profile-container-main-admin-button:hover {
   cursor: pointer;
+}
+
+.profile-container-main-admin-button {
+  background: var(--first-color);
+  z-index: 100;
+}
+
+.profile-container-main-admin-panel {
+  height: 40rem;
+  width: 30rem;
+  display: none;
+  overflow: hidden;
+  position: fixed;
+  z-index: 99;
+  background: var(--first-color);
 }
 
 .profile-container-main-logout {

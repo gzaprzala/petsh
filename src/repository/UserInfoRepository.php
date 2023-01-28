@@ -22,6 +22,7 @@ class UserInfoRepository extends Repository {
       $user['name'],
       $user['age'],
       $user['city'],
+      $user['is_admin']
     );
   }
 

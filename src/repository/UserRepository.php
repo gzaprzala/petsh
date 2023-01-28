@@ -74,4 +74,33 @@ class UserRepository extends Repository {
       $id
     ]);
   }
+
+  public function getAllUsersInfoFromView(): ?array {
+    $stmt = $this->database->connect()->prepare('
+      SELECT admin_view.* 
+      FROM admin_view
+    ');
+
+    $stmt->execute();
+
+    $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if ($users == false) {
+      return null;
+    }
+
+    $adminPanel = [];
+
+    foreach ($users as $user) {
+      $adminPanel[] = new AdminPanel(
+        $user['id'],
+        $user['username'],
+        $user['name'],
+        $user['age'],
+        $user['city']
+      );
+    }
+
+    return $adminPanel;
+  }
 }
