@@ -28,7 +28,7 @@ class UserAnimalRepository extends Repository {
     ');
 
     $stmt->bindParam(':photo', $photo->getPhoto());
-    $stmt->bindParam(':user_id', $animal_id, PDO::PARAM_INT);
+    $stmt->bindParam(':user_id', $user_id, PDO::PARAM_INT);
 
     $stmt->execute();
   }

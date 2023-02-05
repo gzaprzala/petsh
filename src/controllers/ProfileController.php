@@ -88,10 +88,18 @@ class ProfileController extends AppController {
 
   public function userAnimalUpload() {
     $this->id = $_SESSION['id'];
-    $userAnimal = new UserAnimal($_POST['animal']);
-    $this->userAnimalRepository->addPhoto($userAnimal, $this->id);
 
-    return $this->animal();
+    if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
+      move_uploaded_file(
+        $_FILES['file']['tmp_name'],
+        dirname(__DIR__) . self::UPLOAD_DIRECTORY . $_FILES['file']['name']
+      );
+
+      $userAnimal = new UserAnimal($_FILES['file']['name']);
+      $this->userAnimalRepository->addPhoto($userAnimal, $this->id);
+
+      return $this->animal();
+    }
   }
 
   public function userAnimalInfoUpload() {
