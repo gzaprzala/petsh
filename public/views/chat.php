@@ -39,7 +39,7 @@
         <div id="chat" class="chat-container-main-right-messages">
           <?php foreach ($friendsMessage as $message) : ?>
             <div class="chat-container-main-right-messages-sender">
-              <?php if ($message->getSenderId() == $_SESSION['id']) : ?>
+              <?php if ($message->getSenderId() == $_COOKIE['id']) : ?>
                 <div class="chat-container-main-right-messages-sender-message">
                   <p>
                     <?= $message->getMessageContent() ?>
@@ -49,7 +49,7 @@
               <?php endif ?>
             </div>
             <div class="chat-container-main-right-messages-receiver">
-              <?php if ($message->getReceiverId() == $_SESSION['id']) : ?>
+              <?php if ($message->getReceiverId() == $_COOKIE['id']) : ?>
                 <?php foreach ($friendsList as $friend) : ?>
                   <?php if ($friend->getId() == (int)($_GET['room'])) : ?>
                     <img class="chat-container-main-right-user-photo-receiver" src="public/uploads/<?= $friend->getPersonPhoto(); ?>" alt="photo">
@@ -66,7 +66,7 @@
         </div>
         <form action="addMessage" class="chat-container-main-right-tools" method="post">
           <div class="chat-container-main-right-tools-enter">
-            <input type="hidden" name="sender_id" value="<?= $_SESSION['id']; ?>">
+            <input type="hidden" name="sender_id" value="<?= $_COOKIE['id']; ?>">
             <input type="hidden" name="receiver_id" value="<?= (int)($_GET['room']); ?>">
             <input class="chat-container-main-right-tools-enter-new" type="text" name="message_content" placeholder="Enter a message..." autocomplete="off">
             <div class="chat-container-main-right-tools-enter-send">

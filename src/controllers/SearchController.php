@@ -20,17 +20,15 @@ class SearchController extends AppController {
   public function __construct() {
     parent::__construct();
     $this->searchCardsRepository = new SearchCardsRepository();
-
-    session_start();
   }
 
   public function search() {
-    if (!isset($_SESSION['id']) || empty($_SESSION['id'])) {
+    if (!isset($_COOKIE['id']) || empty($_COOKIE['id'])) {
       header("Location: login");
       exit;
     }
 
-    $this->id = $_SESSION['id'];
+    $this->id = $_COOKIE['id'];
     $searchCards = $this->searchCardsRepository->getSearchCards($this->id);
 
     return $this->render('search', ['searchCards' => $searchCards]);

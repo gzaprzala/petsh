@@ -32,16 +32,15 @@ class ProfileController extends AppController {
     $this->userAnimalRepository = new UserAnimalRepository();
     $this->userAnimalInfoRepository = new UserAnimalInfoRepository();
     $this->userRepository = new UserRepository();
-    session_start();
   }
 
   public function profile() {
-    if (!isset($_SESSION['id']) || empty($_SESSION['id'])) {
+    if (!isset($_COOKIE['id']) || empty($_COOKIE['id'])) {
       header("Location: login");
       exit;
     }
 
-    $this->id = $_SESSION['id'];
+    $this->id = $_COOKIE['id'];
     $photo = $this->userPhotoRepository->getPhoto($this->id);
     $userInfo = $this->userInfoRepository->getUserInfo($this->id);
     $adminPanel = $this->userRepository->getAllUsersInfoFromView();
@@ -50,12 +49,12 @@ class ProfileController extends AppController {
   }
 
   public function animal() {
-    if (!isset($_SESSION['id']) || empty($_SESSION['id'])) {
+    if (!isset($_COOKIE['id']) || empty($_COOKIE['id'])) {
       header("Location: login");
       exit;
     }
 
-    $this->id = $_SESSION['id'];
+    $this->id = $_COOKIE['id'];
     $userAnimal = $this->userAnimalRepository->getPhoto($this->id);
     $userAnimalInfo = $this->userAnimalInfoRepository->getUserAnimalInfo($this->id);
 
@@ -63,7 +62,7 @@ class ProfileController extends AppController {
   }
 
   public function photoUpload() {
-    $this->id = $_SESSION['id'];
+    $this->id = $_COOKIE['id'];
     if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
       move_uploaded_file(
         $_FILES['file']['tmp_name'],
@@ -79,7 +78,7 @@ class ProfileController extends AppController {
   }
 
   public function userInfoUpload() {
-    $this->id = $_SESSION['id'];
+    $this->id = $_COOKIE['id'];
     $userInfo = new UserInfo($_POST['name'], $_POST['age'], $_POST['city']);
     $this->userInfoRepository->addUserInfo($userInfo, $this->id);
 
@@ -87,7 +86,7 @@ class ProfileController extends AppController {
   }
 
   public function userAnimalUpload() {
-    $this->id = $_SESSION['id'];
+    $this->id = $_COOKIE['id'];
 
     if ($this->isPost() && is_uploaded_file($_FILES['file']['tmp_name']) && $this->validate($_FILES['file'])) {
       move_uploaded_file(
@@ -103,7 +102,7 @@ class ProfileController extends AppController {
   }
 
   public function userAnimalInfoUpload() {
-    $this->id = $_SESSION['id'];
+    $this->id = $_COOKIE['id'];
     $userAnimal = new UserAnimalInfo($_POST['name'], $_POST['age']);
     $this->userAnimalInfoRepository->addUserAnimalInfo($userAnimal, $this->id);
 

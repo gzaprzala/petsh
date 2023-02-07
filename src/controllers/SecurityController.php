@@ -10,11 +10,9 @@ class SecurityController extends AppController {
   public function __construct() {
     parent::__construct();
     $this->userRepository = new UserRepository();
-    session_start();
   }
 
   public function login() {
-
     if (!$this->isPost()) {
       return $this->render('login');
     }
@@ -36,7 +34,9 @@ class SecurityController extends AppController {
       return $this->render('login', ['messages' => ['Wrong password!']]);
     }
 
-    $_SESSION['id'] = $user->getId();
+    if (!isset($_COOKIE['id'])) {
+      setcookie('id', $user->getId(), time() + 3600, '/');
+    }
 
     $url = "http://$_SERVER[HTTP_HOST]";
     header("Location: {$url}/search");
@@ -55,7 +55,7 @@ class SecurityController extends AppController {
       return $this->render('register', ['messages' => ['Please provide proper password']]);
     }
 
-    $unique_id = uniqid();
+    $unique_id = (int)uniqid();
 
     $user = new User($username, md5($password), $unique_id);
 
@@ -65,9 +65,9 @@ class SecurityController extends AppController {
   }
 
   public function logout() {
-    session_start();
-    session_unset();
-    session_destroy();
+    if (isset($_COOKIE['id'])) {
+      setcookie('id', '', time() - 3600, '/');
+    }
     $url = "http://$_SERVER[HTTP_HOST]";
     header("Location: {$url}/login");
   }

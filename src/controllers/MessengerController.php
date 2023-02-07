@@ -23,16 +23,15 @@ class MessengerController extends AppController {
     $this->userInfoRepository = new UserInfoRepository();
     $this->friendsListRepository = new FriendsListRepository();
     $this->friendsMessagesRepository = new FriendsMessagesRepository();
-    session_start();
   }
 
   public function chat() {
-    if (!isset($_SESSION['id']) || empty($_SESSION['id'])) {
+    if (!isset($_COOKIE['id']) || empty($_COOKIE['id'])) {
       header("Location: login");
       exit;
     }
 
-    $this->id = $_SESSION['id'];
+    $this->id = $_COOKIE['id'];
     $receiver_id = (int)$_GET['room'];
     $photo = $this->userPhotoRepository->getPhoto($this->id);
     $userInfo = $this->userInfoRepository->getUserInfo($this->id);
@@ -43,12 +42,12 @@ class MessengerController extends AppController {
   }
 
   public function addMessage() {
-    if (!isset($_SESSION['id']) || empty($_SESSION['id'])) {
+    if (!isset($_COOKIE['id']) || empty($_COOKIE['id'])) {
       header("Location: login");
       exit;
     }
 
-    $this->id = $_SESSION['id'];
+    $this->id = $_COOKIE['id'];
     $message = $_POST['message_content'];
     $receiver_id = (int)$_POST['receiver_id'];
 

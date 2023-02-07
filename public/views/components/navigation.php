@@ -8,7 +8,7 @@
   <a href="profile" class="a-centered">
     <img src="public/img/profile-mobile.svg" alt="profile" class="container-navigation-profile">
   </a>
-  <?php $GLOBALS['chat'] = ($_SESSION['id'] == 1) ? 2 : 1; ?>
+  <?php $GLOBALS['chat'] = ($_COOKIE['id'] == 1) ? 2 : 1; ?>
   <a href="chat?room=<?= $GLOBALS['chat'] ?>" class="a-centered">
     <img src="public/img/chat-mobile.svg" alt="chat" class="container-navigation-chat">
   </a>
