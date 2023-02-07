@@ -12,5 +12,5 @@
   <a href="chat?room=<?= $GLOBALS['chat'] ?>" class="a-centered">
     <img src="public/img/chat-mobile.svg" alt="chat" class="container-navigation-chat">
   </a>
-  <img src="public/img/dark-mode.svg" alt="logo" class="container-navigation-darkmode">
+  <input type="color" id="first-color">
 </div>

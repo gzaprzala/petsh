@@ -13,7 +13,4 @@
       <img src="public/img/logo-fb.svg" alt="logo-facebook" class="container-footer-socials-facebook">
     </a>
   </div>
-  <div class="container-footer-animals">
-    <img src="public/img/animals.png" alt="animals" class="container-footer-animals-img">
-  </div>
 </div>

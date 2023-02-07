@@ -1,11 +1,15 @@
-.container-navigation-darkmode {
-  position: fixed;
-  height: 3rem;
-  width: auto;
+input[type="color"] {
+	border: none;
+	width: 32px;
+	height: 32px;
+  border-radius: 15%;
+  background: white;
+  margin-bottom: 6px;
+  box-shadow: 1.5px 1.5px 1px 1px rgba(66, 68, 90, 0.4);
+}
+
+input[type="color"]:hover {
   cursor: pointer;
-  filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
-  right: 2%;
-  top: 5%;
 }
 
 .container-navigation {
@@ -34,5 +38,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  input[type="color"] {
+    margin-bottom: 2px;
   }
 }

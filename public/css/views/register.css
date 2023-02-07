@@ -15,11 +15,9 @@ a:visited {
 }
 
 :root {
-  --first-color: #2e6969;
-  --second-color: #1e4444;
-  --desktop-background: url(../../img/background.png);
-  --desktop-background-full: url(../../img/full-background.png);
-  --mobile-background-full: url(../../img/full-background-mobile.png);
+  --first-color:#2e6969;
+  --mobile-background-full: var(--first-color);
+  --desktop-background: var(--first-color);
 }
 
 .dark-mode {

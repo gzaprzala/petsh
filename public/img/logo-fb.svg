@@ -1,8 +1,8 @@
 <svg width="85" height="85" viewBox="0 0 85 85" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_68_108)">
 <g clip-path="url(#clip0_68_108)">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10 65H65V10H10V65Z" fill="#2E6969"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M56.1878 20.2493V27.3615L51.9667 27.3725C48.658 27.3725 48.0204 28.9444 48.0204 31.2419V36.3314H55.902L54.8797 44.29H48.0204V65H39.7991V44.29H32.9166V36.3314H39.7991V30.4614C39.7991 23.646 43.9531 19.9305 50.043 19.9305C52.9461 19.9305 55.4513 20.1504 56.1878 20.2493Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M10 65H65V10H10V65Z" fill="black" fill-opacity="0.3"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M56.1878 20.2493V27.3615L51.9667 27.3725C48.658 27.3725 48.0204 28.9444 48.0204 31.2419V36.3314H55.902L54.8797 44.29H48.0204V65H39.7991V44.29H32.9166V36.3314H39.7991V30.4614C39.7991 23.646 43.9531 19.9305 50.043 19.9305C52.9461 19.9305 55.4513 20.1504 56.1878 20.2493Z" fill="white" />
 </g>
 </g>
 <defs>

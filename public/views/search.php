@@ -10,7 +10,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Search / Petsh</title>
-  <script src="public/js/darkMode.js" defer></script>
+  <script src="public/js/colorPicker.js" defer></script>
   <script src="public/js/reactions.js" defer></script>
 </head>
 
@@ -20,8 +20,11 @@
     <div class="search-container-cards">
       <?php foreach ($searchCards as $searchCard) : ?>
         <div class="search-container-cards-card">
-          <img class="search-container-cards-card-photos-person" src="public/uploads/<?= $searchCard->getPersonPhoto(); ?>" alt="photo">
-          <img class="search-container-cards-card-photos-animal" src="public/uploads/<?= $searchCard->getPersonAnimalPhoto(); ?>" alt="photo">
+          <div class="search-container-cards-card-photos">
+            <img class="search-container-cards-card-photos-person" src="public/uploads/<?= $searchCard->getPersonPhoto(); ?>" alt="photo">
+            <img class="search-container-cards-card-photos-animal" src="public/uploads/<?= $searchCard->getPersonAnimalPhoto(); ?>" alt="photo">
+          </div>
+
           <div class="search-container-cards-card-description">
             <div class="search-container-cards-card-description-person">
               <img src="public/img/person-avatar.svg" alt="person-icon" class="search-container-cards-card-description-person-icon">
