@@ -24,12 +24,16 @@
             <div class="chat-container-main-left-user1-active">
               <a href="/chat?room=<?= $friend->getId(); ?>">
                 <img class="chat-container-main-left-user1-photo" src="public/uploads/<?= $friend->getPersonPhoto(); ?>" alt="photo">
+                <p><?= $friend->getName(); ?></p>
               </a>
             </div>
           <?php else : ?>
             <div class="chat-container-main-left-user1">
               <a href="/chat?room=<?= $friend->getId(); ?>">
-                <img class="chat-container-main-left-user1-photo" src="public/uploads/<?= $friend->getPersonPhoto(); ?>" alt="photo">
+                <div class="chat-container-main-left-user-info">
+                  <img class="chat-container-main-left-user1-photo" src="public/uploads/<?= $friend->getPersonPhoto(); ?>" alt="photo">
+                  <p><?= $friend->getName(); ?></p>
+                </div>
               </a>
             </div>
           <?php endif ?>
