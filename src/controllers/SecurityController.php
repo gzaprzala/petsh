@@ -48,6 +48,7 @@ class SecurityController extends AppController {
     }
 
     $username = $_POST['username'];
+    $email = $_POST['email'];
     $password = $_POST['password'];
     $confirmedPassword = $_POST['confirmedPassword'];
 
@@ -57,7 +58,7 @@ class SecurityController extends AppController {
 
     $unique_id = (int)uniqid();
 
-    $user = new User($username, md5($password), $unique_id);
+    $user = new User($username, $email, md5($password), $unique_id);
 
     $this->userRepository->addUser($user);
 

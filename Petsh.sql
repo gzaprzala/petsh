@@ -2,6 +2,7 @@ CREATE TABLE IF NOT EXISTS users (
       id serial
       constraint users_pk primary key,
       username varchar(64) not null,
+	  email varchar(64) not null,
       password varchar(64) not null
 );
 
@@ -46,8 +47,9 @@ CREATE TABLE IF NOT EXISTS animals_details (
 CREATE TABLE IF NOT EXISTS users_messages (
 	id serial
 	constraint users_messages_pk primary key,
+	sender_id integer not null
+	constraint sender_id_messages references users(id),
 	message_content varchar(256),
-	sender_id integer,
 	receiver_id integer
 );
 
@@ -56,16 +58,16 @@ SELECT users.id, users.username, users_details.name, users_details.age, users_de
 FROM users
 JOIN users_details ON users.id = users_details.user_id;
 
-INSERT INTO public.users (id, username, password) 
-VALUES (33, 'test1', '5a105e8b9d40e1329780d62ea2265d8a');
+INSERT INTO public.users (id, username, email, password) 
+VALUES (33, 'test1', 'test1@test1.test1', '5a105e8b9d40e1329780d62ea2265d8a');
 -- haslo to test1
 
-INSERT INTO public.users (id, username, password) 
-VALUES (66, 'test2', 'ad0234829205b9033196ba818f7a872b');
+INSERT INTO public.users (id, username, email, password) 
+VALUES (66, 'test2', 'test2@test2.test2', 'ad0234829205b9033196ba818f7a872b');
 -- haslo to test2
 
-INSERT INTO public.users (id, username, password) 
-VALUES (99, 'admin', '21232f297a57a5a743894a0e4a801fc3');
+INSERT INTO public.users (id, username, email, password) 
+VALUES (99, 'admin', 'admin@admin.admin', '21232f297a57a5a743894a0e4a801fc3');
 -- haslo to admin
 
 INSERT INTO public.users_details (id, user_id, name, age, city, likes, dislikes, is_admin)

@@ -19,6 +19,7 @@ class UserRepository extends Repository {
 
     return new User(
       $user['username'],
+      $user['email'],
       $user['password'],
       $user['id']
     );
@@ -26,13 +27,14 @@ class UserRepository extends Repository {
 
   public function addUser(User $user) {
     $stmt = $this->database->connect()->prepare('
-      INSERT INTO users (username, password)
-      VALUES (?, ?)
+      INSERT INTO users (username, email, password)
+      VALUES (?, ?, ?)
       RETURNING id;
     ');
 
     $stmt->execute([
       $user->getUsername(),
+      $user->getEmail(),
       $user->getPassword()
     ]);
 
