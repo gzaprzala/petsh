@@ -11,6 +11,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login / Petsh</title>
   <script src="public/js/colorPicker.js" defer></script>
+  <script src="public/js/loginCaptcha.js" defer></script>
 </head>
 
 <body>
@@ -33,6 +34,8 @@
         </div>
         <input name="username" type="text" placeholder="login" class="container-main-login-form-username">
         <input name="password" type="password" placeholder="password" class="container-main-login-form-password">
+        <p class="container-main-login-form-captcha-text"></p>
+        <input class="container-main-login-form-captcha-input" type="text" placeholder="Enter captcha code..." />
         <button type="submit" class="container-main-login-form-submit">CONFIRM</button>
       </form>
     </div>

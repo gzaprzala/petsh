@@ -33,14 +33,9 @@ a:visited {
 
 .container-main-login {
   width: 100%;
-  height: 30%;
   color: white;
   text-align: center;
-  padding-top: 5%;
-}
-
-.container-main-login {
-  height: 40%;
+  height: 60%;
   padding-top: 7%;
 }
 
@@ -92,11 +87,16 @@ a:visited {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 12rem;
+  height: 20rem;
+}
+
+.container-main-login-form-captcha-text {
+  user-select: none;
 }
 
 .container-main-login-form-username,
-.container-main-login-form-password {
+.container-main-login-form-password,
+.container-main-login-form-captcha-input {
   margin-top: 1rem;
   height: 3rem;
   width: 20rem;
@@ -109,7 +109,8 @@ a:visited {
 }
 
 .container-main-login-form-username::placeholder,
-.container-main-login-form-password::placeholder {
+.container-main-login-form-password::placeholder,
+.container-main-login-form-captcha-input::placeholder {
   color: var(--first-color);
 }
 
@@ -128,6 +129,15 @@ a:visited {
 .container-main-login-form-submit:hover {
   background: #ffffff70;
   cursor: pointer;
+}
+
+.no-valid {
+  opacity: 0.3;
+}
+
+.no-valid:hover {
+  cursor: default;
+  background: var(--first-color);
 }
 
 @media only screen and (max-width: 900px) and (min-width: 431px) {

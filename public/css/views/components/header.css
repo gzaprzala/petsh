@@ -1,4 +1,4 @@
-input[type="color"] {
+input[type='color'] {
 	border: none;
 	width: 32px;
 	height: 32px;
@@ -6,6 +6,10 @@ input[type="color"] {
   background: white;
   margin-bottom: 6px;
   box-shadow: 1.5px 1.5px 1px 1px rgba(66, 68, 90, 0.4);
+}
+
+input[type='color']:hover {
+  cursor: pointer;
 }
 
 .container-header {
