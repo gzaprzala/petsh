@@ -7,7 +7,7 @@ let captchaAnswer;
 
 function generateCaptcha() {
   let captcha = '';
-  for (let i = 0; i < 8; i++) {
+  for (let i = 0; i < 6; i++) {
     captcha += possibleChars.charAt(Math.floor(Math.random() * possibleChars.length));
   }
   captchaText.textContent = captcha;

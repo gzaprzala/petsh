@@ -38,6 +38,7 @@
         </div>
         <button class="animal-container-main-apply">Apply</button>
       </form>
+      <br><br>
     </div>
   </div>
 </body>

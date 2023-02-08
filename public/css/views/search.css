@@ -25,14 +25,10 @@ a:visited {
   flex-direction: column;
   width: 100vw;
   height: 100vh;
-  background: var(--desktop-background);
+  background: var(--desktop-background-full);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100% 100%;
-}
-
-.search-container {
-  background: var(--desktop-background-full);
 }
 
 .search-container-navigation-lens,

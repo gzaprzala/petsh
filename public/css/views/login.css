@@ -96,7 +96,8 @@ a:visited {
 
 .container-main-login-form-username,
 .container-main-login-form-password,
-.container-main-login-form-captcha-input {
+.container-main-login-form-captcha-input,
+.container-main-login-form-captcha-text {
   margin-top: 1rem;
   height: 3rem;
   width: 20rem;
@@ -106,6 +107,10 @@ a:visited {
   color: var(--first-color);
   filter: drop-shadow(5px 5px 15px rgba(0, 0, 0, 0.25));
   padding-left: 1rem;
+}
+
+.container-main-login-form-captcha-input {
+  width: 13rem;
 }
 
 .container-main-login-form-username::placeholder,
@@ -129,6 +134,24 @@ a:visited {
 .container-main-login-form-submit:hover {
   background: #ffffff70;
   cursor: pointer;
+}
+
+.container-main-login-form-captcha {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.container-main-login-form-captcha-text {
+  color: var(--first-color);
+  background: white;
+  width: 6rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 0.7rem;
+  font-size: 1.5rem;
 }
 
 .no-valid {

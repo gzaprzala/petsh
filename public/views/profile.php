@@ -25,6 +25,7 @@
       <?php if ($userInfo->getIsAdmin() == 1) : ?>
         <button class="profile-container-main-admin-button">ADMIN PANEL</button>
         <div class="profile-container-main-admin-panel">
+          <br>
           <?= var_dump($userInfo->getIsAdmin()) ?>
         </div>
       <?php endif ?>
@@ -46,11 +47,6 @@
         <div class="profile-container-main-city">City
           <div class="profile-container-main-city-form" method="POST">
             <input name="city" type="text" class="profile-container-main-city-form-update" value=<?= $userInfo->getCity(); ?>>
-          </div>
-        </div>
-        <div class="profile-container-main-password">New password
-          <div class="profile-container-main-password-form" method="POST">
-            <input type="password" class="profile-container-main-password-form-update" placeholder="Enter new password...">
           </div>
         </div>
         <button class="profile-container-main-apply">Apply</button>
