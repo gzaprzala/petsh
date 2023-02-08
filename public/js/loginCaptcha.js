@@ -1,7 +1,7 @@
 const captchaInput = document.querySelector('.container-main-login-form-captcha-input');
 const captchaText = document.querySelector('.container-main-login-form-captcha-text');
 const loginBtn = document.querySelector('.container-main-login-form-submit');
-const possibleChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+const possibleChars = 'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz123456789';
 
 let captchaAnswer;
 
