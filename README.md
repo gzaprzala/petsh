@@ -6,6 +6,10 @@
 
 Find new friends and invite them for a first walk!
 
+# about app
+
+Petsh is a web application created for pet owners and animal enthusiasts. The platform connects users with similar interests in pets and offers the opportunity to organize walks with their furry friends. Additionally, users can chat with each other. Petsh provides a unique space for pet owners to connect and engage with like-minded individuals while enjoying time with their pets.
+
 # setup
 
 1. Make sure you have Docker installed on your machine. You can download it from the official website https://www.docker.com if you don't have it.
