@@ -97,12 +97,18 @@ a:visited {
 
 .profile-container-main-admin-panel {
   height: 40rem;
-  width: 30rem;
+  width: 25rem;
   display: none;
   overflow: hidden;
   position: fixed;
   z-index: 99;
   background: var(--first-color);
+}
+
+.profile-container-main-admin-panel-table { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .profile-container-main-logout {
@@ -264,6 +270,11 @@ input[type=file]::file-selector-button:hover {
 
 .profile-container-main-buttons-animal {
   border-radius: 0 15px 0 0;
+}
+
+.admin-panel-photo {
+  width: 30px;
+  height: 30px;
 }
 
 @media only screen and (max-device-width: 430px) {

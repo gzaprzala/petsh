@@ -23,10 +23,25 @@
     </div>
     <div class="profile-container-main">
       <?php if ($userInfo->getIsAdmin() == 1) : ?>
-        <button class="profile-container-main-admin-button">ADMIN PANEL</button>
+        <button class="profile-container-main-admin-button">ADMIN DASHBOARD</button>
         <div class="profile-container-main-admin-panel">
           <br>
-          <?= var_dump($userInfo->getIsAdmin()) ?>
+          <div class="profile-container-main-admin-panel-table">
+            <table>
+              <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Photo</th>
+              </tr>
+              <?php foreach ($friendsList as $friend) : ?>
+                <tr>
+                  <td><?= $friend->getId(); ?></td>
+                  <td><?= $friend->getName(); ?></td>
+                  <td><img class="admin-panel-photo" src="public/uploads/<?= $friend->getPersonPhoto(); ?>" alt="photo"></td>
+                </tr>
+              <?php endforeach; ?>
+            </table>
+          </div>
         </div>
       <?php endif ?>
       <div class="profile-container-main-photo">

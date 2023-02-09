@@ -97,6 +97,11 @@ docker compose up
   <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/ProfileAnimalPage.png" />
 </div>
 
+<div align="center">
+  <p>Admin dashboard on profile page</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/AdminDashboard.gif" />
+</div>
+
 # presentation of mobile views
 
 <div align="center">
@@ -128,6 +133,12 @@ docker compose up
 <div align="center">
   <p>Chat page</p>
   <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/ChatMobile.png" />
+</div>
+
+# ERD diagram
+
+<div align="center">
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/PetshERD.png" />
 </div>
 
 # created with

@@ -6,11 +6,13 @@ require_once __DIR__ . '/../models/UserInfo.php';
 require_once __DIR__ . '/../models/UserAnimal.php';
 require_once __DIR__ . '/../models/UserAnimalInfo.php';
 require_once __DIR__ . '/../models/AdminPanel.php';
+require_once __DIR__ . '/../models/FriendsList.php';
 require_once __DIR__ . '/../repository/UserRepository.php';
 require_once __DIR__ . '/../repository/UserPhotoRepository.php';
 require_once __DIR__ . '/../repository/UserInfoRepository.php';
 require_once __DIR__ . '/../repository/UserAnimalRepository.php';
 require_once __DIR__ . '/../repository/UserAnimalInfoRepository.php';
+require_once __DIR__ . '/../repository/FriendsListRepository.php';
 
 class ProfileController extends AppController {
   const MAX_FILE_SIZE = 1024 * 1024;
@@ -24,6 +26,7 @@ class ProfileController extends AppController {
   private $userAnimalRepository;
   private $userAnimalInfoRepository;
   private $userRepository;
+  private $friendsListRepository;
 
   public function __construct() {
     parent::__construct();
@@ -32,6 +35,7 @@ class ProfileController extends AppController {
     $this->userAnimalRepository = new UserAnimalRepository();
     $this->userAnimalInfoRepository = new UserAnimalInfoRepository();
     $this->userRepository = new UserRepository();
+    $this->friendsListRepository = new FriendsListRepository();
   }
 
   public function profile() {
@@ -44,8 +48,9 @@ class ProfileController extends AppController {
     $photo = $this->userPhotoRepository->getPhoto($this->id);
     $userInfo = $this->userInfoRepository->getUserInfo($this->id);
     $adminPanel = $this->userRepository->getAllUsersInfoFromView();
+    $friendsList = $this->friendsListRepository->getFriendsList($this->id);
 
-    return $this->render('profile', ['photo' => $photo, 'userInfo' => $userInfo, 'adminPanel' => $adminPanel]);
+    return $this->render('profile', ['photo' => $photo, 'userInfo' => $userInfo, 'adminPanel' => $adminPanel, 'friendsList' => $friendsList]);
   }
 
   public function animal() {
