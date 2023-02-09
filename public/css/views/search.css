@@ -154,6 +154,10 @@ a:visited {
 }
 
 @media only screen and (max-device-width: 430px) {
+  *::-webkit-scrollbar {
+    width: 0px;
+  }
+
   .search-container {
     background: var(--mobile-background-full);
     display: flex;
