@@ -42,12 +42,12 @@ docker compose up
 # presentation of desktop views
 
 <div align="center">
-  <p>Petsh allows you to easily change background color to whatever you want.</p>
+  <p>Petsh allows you to easily change background color to whatever you want</p>
   <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/HomeColor.gif" />
 </div>
 
 <div align="center">
-  <p>Search page (likes and dislikes possible by using fetchAPI GET and POST methods).</p>
+  <p>Search page (likes and dislikes possible by using fetchAPI GET and POST methods)</p>
   <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/SearchPage.png" />
 </div>
 
@@ -57,13 +57,13 @@ docker compose up
 </div>
 
 <div align="center">
-  <p>Chat page (refresh possible by using fetchAPI GET method).</p>
+  <p>Chat page (refresh possible by using fetchAPI GET method)</p>
   <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/ChatExample.gif" />
 </div>
 
 <div align="center">
   <p>Login page</p>
-  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/LoginPage.png" />
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/LogIn.gif" />
 </div>
 
 <div align="center">
@@ -83,7 +83,7 @@ docker compose up
 
 <div align="center">
   <p>Register page</p>
-  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/RegisterPage.png" />
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/RegisterGif.gif" />
 </div>
 
 <div align="center">
@@ -93,7 +93,7 @@ docker compose up
 
 <div align="center">
   <p>Person and animal profiles edit</p>
-  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/ProfilePage.png" />
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/PhotoUpload.gif" />
   <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/ProfileAnimalPage.png" />
 </div>
 
