@@ -1,4 +1,6 @@
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/logo.png)
+<div align="center">
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/logo.png" />
+</div>
 
 # petsh
 
@@ -39,79 +41,89 @@ docker compose up
 
 # presentation of desktop views
 
-Petsh allows you to easily change background color to whatever you want.
+<div align="center">
+  <p>Petsh allows you to easily change background color to whatever you want.</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/HomeColor.gif" />
+</div>
 
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/HomeColor.gif)
+<div align="center">
+  <p>Search page (likes and dislikes possible by using fetchAPI GET and POST methods).</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/SearchPage.png" />
+</div>
 
-Search page (likes and dislikes possible by using fetchAPI GET and POST methods).
+<div align="center">
+  <p>Redirect to chat from search page</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/RedirectToChat.gif" />
+</div>
 
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/SearchPage.png)
+<div align="center">
+  <p>Chat page (refresh possible by using fetchAPI GET method).</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/ChatExample.gif" />
+</div>
 
-Redirect to chat from search page
+<div align="center">
+  <p>Login page</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/LoginPage.png" />
+</div>
 
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/RedirectToChat.gif)
+<div align="center">
+  <p>Login captcha not valid</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/CaptchaBefore.png" />
+</div>
 
-Chat page (refresh possible by using fetchAPI GET method).
+<div align="center">
+  <p>Login captcha valid</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/CaptchaAfter.png" />
+</div>
 
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/ChatExample.gif)
+<div align="center">
+  <p>Register page</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/RegisterPage.png" />
+</div>
 
-Login page
+<div align="center">
+  <p>Register page validation</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/RegisterValidation.png" />
+</div>
 
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/LoginPage.png)
-
-Login captcha not valid
-
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/CaptchaBefore.png)
-
-Login captcha valid
-
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/CaptchaAfter.png)
-
-Register page
-
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/RegisterPage.png)
-
-Register page validation
-
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/RegisterValidation.png)
-
-Person and animal profiles edit
-
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/ProfilePage.png)
-
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/ProfileAnimalPage.png)
+<div align="center">
+  <p>Person and animal profiles edit</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/ProfilePage.png" />
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/ProfileAnimalPage.png" />
+</div>
 
 # presentation of mobile views
 
-Home page
+<div align="center">
+  <p>Home page</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/HomeMobile.png" />
+</div>
 
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/HomeMobile.png)
+<div align="center">
+  <p>Search page</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/SearchMobile.png" />
+</div>
 
-Search page
+<div align="center">
+  <p>Login page</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/LoginMobile.png" />
+</div>
 
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/SearchMobile.png)
+<div align="center">
+  <p>Register page</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/RegisterMobile.png" />
+</div>
 
-Login page
+<div align="center">
+  <p>Profile page</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/ProfileMobile.png" />
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/ProfileAnimalMobile.png" />
+</div>
 
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/LoginMobile.png)
-
-Register page
-
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/RegisterMobile.png)
-
-Profile page
-
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/ProfileMobile.png)
-
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/ProfileAnimalMobile.png)
-
-Chat page
-
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/ChatMobile.png)
-
-# ERD diagram
-
-![](https://github.com/gzaprzala/petsh/blob/main/public/img/PetshERD.png)
+<div align="center">
+  <p>Chat page</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/ChatMobile.png" />
+</div>
 
 # created with
 
