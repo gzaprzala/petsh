@@ -67,6 +67,11 @@ docker compose up
 </div>
 
 <div align="center">
+  <p>Log out</p>
+  <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/LogOut.gif" />
+</div>
+
+<div align="center">
   <p>Login captcha not valid</p>
   <img src="https://github.com/gzaprzala/petsh/blob/main/public/img/CaptchaBefore.png" />
 </div>
