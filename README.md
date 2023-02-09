@@ -109,6 +109,10 @@ Chat page
 
 ![](https://github.com/gzaprzala/petsh/blob/main/public/img/ChatMobile.png)
 
+# ERD diagram
+
+![](https://github.com/gzaprzala/petsh/blob/main/public/img/PetshERD.png)
+
 # created with
 
 <img align="left" width="30px" padding-right="5px" src="https://pics.freeicons.io/uploads/icons/png/8804286661557996995-512.png" />
